@@ -1,0 +1,93 @@
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\NgopiSek Project PBO.exe
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\NgopiSek Project PBO.deps.json
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\NgopiSek Project PBO.runtimeconfig.json
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\NgopiSek Project PBO.dll
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\NgopiSek Project PBO.pdb
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Properties.Resources.resources
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.SplashScreen.resources
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.csproj.GenerateResource.cache
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.AssemblyInfoInputs.cache
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.AssemblyInfo.cs
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.csproj.CoreCompileInputs.cache
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.dll
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\refint\NgopiSek Project PBO.dll
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.pdb
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.genruntimeconfig.cache
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\ref\NgopiSek Project PBO.dll
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Login.resources
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Controls.UCLogin.resources
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Controls.UCRegister.resources
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\Npgsql.dll
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.csproj.AssemblyReference.cache
+C:\Users\fauzu\source\repos\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek.DAC5D7E4.Up2Date
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\NgopiSek Project PBO.exe
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\NgopiSek Project PBO.deps.json
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\NgopiSek Project PBO.runtimeconfig.json
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\NgopiSek Project PBO.dll
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\NgopiSek Project PBO.pdb
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\Npgsql.dll
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.csproj.AssemblyReference.cache
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Properties.Resources.resources
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Controls.UCHome.resources
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Controls.UCKategori.resources
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Controls.UCLogin.resources
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Controls.UCProduk.resources
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Controls.UCRegister.resources
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Forms.Dashboard.resources
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Login.resources
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Forms.POSKasir.resources
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.SplashScreen.resources
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.csproj.GenerateResource.cache
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.AssemblyInfoInputs.cache
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.AssemblyInfo.cs
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.csproj.CoreCompileInputs.cache
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.sourcelink.json
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek.DAC5D7E4.Up2Date
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.dll
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\refint\NgopiSek Project PBO.dll
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.pdb
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.genruntimeconfig.cache
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\ref\NgopiSek Project PBO.dll
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Forms.TambahProduk.resources
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Forms.EditProduk.resources
+D:\Projectan Moment\Project PBO\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Controls.UCTransaksi.resources
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\NgopiSek Project PBO.exe
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\NgopiSek Project PBO.deps.json
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\NgopiSek Project PBO.runtimeconfig.json
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\NgopiSek Project PBO.dll
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\NgopiSek Project PBO.pdb
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\bin\Debug\net8.0-windows\Npgsql.dll
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.csproj.AssemblyReference.cache
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Properties.Resources.resources
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Controls.UCHome.resources
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Controls.UCKategori.resources
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Controls.UCLogin.resources
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Controls.UCProduk.resources
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Controls.UCRegister.resources
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Controls.UCTransaksi.resources
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Forms.Dashboard.resources
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Login.resources
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Forms.POSKasir.resources
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.SplashScreen.resources
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.csproj.GenerateResource.cache
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.AssemblyInfoInputs.cache
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.AssemblyInfo.cs
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.csproj.CoreCompileInputs.cache
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.sourcelink.json
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek.DAC5D7E4.Up2Date
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.dll
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\refint\NgopiSek Project PBO.dll
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.pdb
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek Project PBO.genruntimeconfig.cache
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\ref\NgopiSek Project PBO.dll
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Forms.FormProduk.resources
+D:\Projectan Moment\Project PBO\Backup\PBO-Final-Project\NgopiSek Project PBO\NgopiSek Project PBO\obj\Debug\net8.0-windows\NgopiSek_Project_PBO.Views.Forms.FormKategori.resources

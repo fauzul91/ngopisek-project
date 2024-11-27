@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "XXhgQgKmNT8=",
+  "success": true,
+  "projectFilePath": "D:\\Projectan Moment\\Project PBO\\Backup\\PBO-Final-Project\\NgopiSek Project PBO\\NgopiSek Project PBO\\NgopiSek Project PBO.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fauzu\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\fauzu\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\fauzu\\.nuget\\packages\\npgsql\\8.0.5\\npgsql.8.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
