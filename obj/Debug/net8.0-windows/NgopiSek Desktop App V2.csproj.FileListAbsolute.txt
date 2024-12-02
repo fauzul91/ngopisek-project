@@ -1,0 +1,32 @@
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\bin\Debug\net8.0-windows\NgopiSek Desktop App V2.exe
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\bin\Debug\net8.0-windows\NgopiSek Desktop App V2.deps.json
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\bin\Debug\net8.0-windows\NgopiSek Desktop App V2.runtimeconfig.json
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\bin\Debug\net8.0-windows\NgopiSek Desktop App V2.dll
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\bin\Debug\net8.0-windows\NgopiSek Desktop App V2.pdb
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\bin\Debug\net8.0-windows\Npgsql.dll
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek Desktop App V2.csproj.AssemblyReference.cache
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Properties.Resources.resources
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Views.Controls.UCLogin.resources
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Views.Controls.UCRegister.resources
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Authentication.resources
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek Desktop App V2.csproj.GenerateResource.cache
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek Desktop App V2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek Desktop App V2.AssemblyInfoInputs.cache
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek Desktop App V2.AssemblyInfo.cs
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek Desktop App V2.csproj.CoreCompileInputs.cache
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek.3C7D7AC6.Up2Date
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek Desktop App V2.dll
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\refint\NgopiSek Desktop App V2.dll
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek Desktop App V2.pdb
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek Desktop App V2.genruntimeconfig.cache
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\ref\NgopiSek Desktop App V2.dll
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Views.Forms.HomepageKasir.resources
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Views.Forms.HomepageAdmin.resources
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Views.Controls.Admin.UCCategory.resources
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Views.Controls.Admin.UCHome.resources
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Views.Controls.Admin.UCOrder.resources
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Views.Controls.Admin.UCProduct.resources
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Views.Forms.Product_Form.resources
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Views.Forms.Category_Form.resources
