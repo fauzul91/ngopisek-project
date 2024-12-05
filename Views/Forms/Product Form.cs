@@ -38,7 +38,8 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
                 nama_produk = textNamaProduk.Text,
                 harga_produk = int.Parse(textHargaProduk.Text),
                 stok_produk = int.Parse(textStokProduk.Text),
-                id_kategori = (int)comboKategori.SelectedValue
+                id_kategori = (int)comboKategori.SelectedValue,
+                foto_produk = ConvertImageToByteArray(pictureProduct.Image) // Konversi gambar ke byte array
             };
 
             try
@@ -63,7 +64,6 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
                 MessageBox.Show($"Terjadi kesalahan saat menyimpan produk: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -106,6 +106,16 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
             textHargaProduk.Text = produk.harga_produk.ToString();
             textStokProduk.Text = produk.stok_produk.ToString();
             comboKategori.SelectedValue = produk.id_kategori;
+
+            if (produk.foto_produk != null && produk.foto_produk.Length > 0)
+            {
+                pictureProduct.Image = ConvertByteArrayToImage(produk.foto_produk);
+            }
+            else
+            {
+                pictureProduct.Image = null; // Jika tidak ada gambar, kosongkan PictureBox
+            }
+
             IsEditMode = true;
             ProductId = produk.id_produk;
 
@@ -115,6 +125,40 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
         private void UpdateButtonText()
         {
             btnAdd.Text = IsEditMode ? "Update" : "Tambah";
+        }
+
+        private void pressBrowse_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    pictureProduct.Image = Image.FromFile(openFileDialog.FileName);
+                    pictureProduct.SizeMode = PictureBoxSizeMode.Zoom; // Atur ulang untuk memastikan
+                }
+            }
+        }
+
+        private byte[] ConvertImageToByteArray(Image image)
+        {
+            if (image == null) return null;
+
+            using (var ms = new MemoryStream())
+            {
+                image.Save(ms, System.Drawing.Imaging.ImageFormat.Png); // Simpan dalam format PNG
+                return ms.ToArray();
+            }
+        }
+
+        private Image ConvertByteArrayToImage(byte[] imageData)
+        {
+            if (imageData == null || imageData.Length == 0) return null;
+
+            using (var ms = new MemoryStream(imageData))
+            {
+                return Image.FromStream(ms);
+            }
         }
     }
 }

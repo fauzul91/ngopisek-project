@@ -120,7 +120,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
 
         private void CustomizeColumnHeaders()
         {
-            var hiddenColumns = new[] { "id_produk", "id_kategori" };
+            var hiddenColumns = new[] { "id_produk", "id_kategori", "foto_produk"};
 
             foreach (DataGridViewColumn column in dataGridProduct.Columns)
             {

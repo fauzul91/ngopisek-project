@@ -23,7 +23,8 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
                 p.harga_produk,
                 p.stok_produk,
                 p.id_kategori,
-                k.nama_kategori
+                k.nama_kategori,
+                p.foto_produk
             FROM produk p
             JOIN kategori k on p.id_kategori = k.id_kategori
             ORDER BY p.id_produk";
@@ -41,7 +42,8 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
                 p.harga_produk,
                 p.stok_produk,
                 p.id_kategori,
-                k.nama_kategori
+                k.nama_kategori,
+                p.foto_produk
             FROM produk p
             JOIN kategori k on p.id_kategori = k.id_kategori
             WHERE p.id_produk = @id
@@ -58,14 +60,20 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
 
         public static void AddProduct(M_Produk produkBaru)
         {
-            string query = $"INSERT INTO produk(nama_produk, harga_produk, stok_produk, id_kategori) VALUES(@nama_produk, @harga_produk, @stok_produk, @id_kategori)";
+            string query = $@"
+            INSERT INTO produk(nama_produk, harga_produk, stok_produk, id_kategori, foto_produk) 
+            VALUES(@nama_produk, @harga_produk, @stok_produk, @id_kategori, @foto_produk)";
 
             NpgsqlParameter[] parameters =
             {
-                new NpgsqlParameter("@nama_produk", produkBaru.nama_produk),
-                new NpgsqlParameter("@harga_produk", produkBaru.harga_produk),
-                new NpgsqlParameter("@stok_produk", produkBaru.stok_produk),
-                new NpgsqlParameter("@id_kategori", produkBaru.id_kategori),
+            new NpgsqlParameter("@nama_produk", produkBaru.nama_produk),
+            new NpgsqlParameter("@harga_produk", produkBaru.harga_produk),
+            new NpgsqlParameter("@stok_produk", produkBaru.stok_produk),
+            new NpgsqlParameter("@id_kategori", produkBaru.id_kategori),
+            new NpgsqlParameter("@foto_produk", NpgsqlTypes.NpgsqlDbType.Bytea)
+            {
+                Value = produkBaru.foto_produk ?? (object)DBNull.Value // Handle null images
+            }
             };
 
             commandExecutor(query, parameters);
@@ -79,23 +87,29 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
                 nama_produk = @nama_produk, 
                 harga_produk = @harga_produk, 
                 stok_produk = @stok_produk, 
-                id_kategori = @id_kategori
+                id_kategori = @id_kategori,
+                foto_produk = @foto_produk
             WHERE id_produk = @id_produk";
 
             NpgsqlParameter[] parameters =
             {
-                new NpgsqlParameter("@nama_produk", produk.nama_produk),
-                new NpgsqlParameter("@harga_produk", produk.harga_produk),
-                new NpgsqlParameter("@stok_produk", produk.stok_produk),
-                new NpgsqlParameter("@id_kategori", produk.id_kategori),
+            new NpgsqlParameter("@nama_produk", produk.nama_produk),
+            new NpgsqlParameter("@harga_produk", produk.harga_produk),
+            new NpgsqlParameter("@stok_produk", produk.stok_produk),
+            new NpgsqlParameter("@id_kategori", produk.id_kategori),
+            new NpgsqlParameter("@foto_produk", NpgsqlTypes.NpgsqlDbType.Bytea)
+            {
+            Value = produk.foto_produk ?? (object)DBNull.Value
+            },
                 new NpgsqlParameter("@id_produk", produk.id_produk),
             };
             commandExecutor(query, parameters);
         }
+
         public static DataTable SearchProduct(string textProduct)
         {
             string query = @"
-            SELECT p.id_produk, p.nama_produk, p.harga_produk, p.stok_produk, p.id_kategori, k.nama_kategori 
+            SELECT p.id_produk, p.nama_produk, p.harga_produk, p.stok_produk, p.id_kategori, k.nama_kategori, p.foto_produk 
             FROM produk p 
             JOIN kategori k ON p.id_kategori = k.id_kategori 
             WHERE p.nama_produk ILIKE @textProduct 

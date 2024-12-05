@@ -32,11 +32,11 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             searchBar = new Panel();
-            searchIcon = new Button();
             textSearch = new TextBox();
             panel1 = new Panel();
             dataGridProduct = new DataGridView();
             btnAddProduct = new Button();
+            searchIcon = new Button();
             searchBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridProduct).BeginInit();
             SuspendLayout();
@@ -52,19 +52,6 @@
             searchBar.Name = "searchBar";
             searchBar.Size = new Size(748, 85);
             searchBar.TabIndex = 0;
-            // 
-            // searchIcon
-            // 
-            searchIcon.BackColor = Color.Transparent;
-            searchIcon.FlatAppearance.BorderSize = 0;
-            searchIcon.FlatStyle = FlatStyle.Flat;
-            searchIcon.Image = Properties.Resources.Search_Icon;
-            searchIcon.Location = new Point(22, 14);
-            searchIcon.Name = "searchIcon";
-            searchIcon.Size = new Size(54, 45);
-            searchIcon.TabIndex = 2;
-            searchIcon.UseVisualStyleBackColor = false;
-            searchIcon.Click += searchIcon_Click;
             // 
             // textSearch
             // 
@@ -147,6 +134,19 @@
             btnAddProduct.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAddProduct.UseVisualStyleBackColor = false;
             btnAddProduct.Click += btnAddProduct_Click;
+            // 
+            // searchIcon
+            // 
+            searchIcon.BackColor = Color.Transparent;
+            searchIcon.FlatAppearance.BorderSize = 0;
+            searchIcon.FlatStyle = FlatStyle.Flat;
+            searchIcon.Image = Properties.Resources.Search_Icon;
+            searchIcon.Location = new Point(22, 14);
+            searchIcon.Name = "searchIcon";
+            searchIcon.Size = new Size(54, 45);
+            searchIcon.TabIndex = 2;
+            searchIcon.UseVisualStyleBackColor = false;
+            searchIcon.Click += searchIcon_Click;
             // 
             // UCProduct
             // 

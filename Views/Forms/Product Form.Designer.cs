@@ -39,6 +39,10 @@
             label4 = new Label();
             label5 = new Label();
             comboKategori = new ComboBox();
+            pressBrowse = new Label();
+            label6 = new Label();
+            pictureProduct = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureProduct).BeginInit();
             SuspendLayout();
             // 
             // btnCancel
@@ -48,7 +52,7 @@
             btnCancel.FlatStyle = FlatStyle.Flat;
             btnCancel.Font = new Font("Poppins SemiBold", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancel.ForeColor = Color.FromArgb(53, 53, 53);
-            btnCancel.Location = new Point(389, 664);
+            btnCancel.Location = new Point(915, 650);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(224, 61);
             btnCancel.TabIndex = 8;
@@ -63,7 +67,7 @@
             btnAdd.FlatStyle = FlatStyle.Flat;
             btnAdd.Font = new Font("Poppins SemiBold", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAdd.ForeColor = Color.White;
-            btnAdd.Location = new Point(139, 664);
+            btnAdd.Location = new Point(665, 650);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(224, 61);
             btnAdd.TabIndex = 7;
@@ -74,7 +78,7 @@
             // textNamaProduk
             // 
             textNamaProduk.Font = new Font("Poppins", 14F);
-            textNamaProduk.Location = new Point(139, 157);
+            textNamaProduk.Location = new Point(665, 143);
             textNamaProduk.Name = "textNamaProduk";
             textNamaProduk.Size = new Size(474, 49);
             textNamaProduk.TabIndex = 6;
@@ -83,7 +87,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Gilroy-SemiBold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(262, 43);
+            label2.Location = new Point(86, 33);
             label2.Name = "label2";
             label2.Size = new Size(229, 44);
             label2.TabIndex = 4;
@@ -93,7 +97,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Gilroy-Medium", 12F);
-            label1.Location = new Point(139, 125);
+            label1.Location = new Point(665, 111);
             label1.Name = "label1";
             label1.Size = new Size(161, 29);
             label1.TabIndex = 5;
@@ -102,7 +106,7 @@
             // textHargaProduk
             // 
             textHargaProduk.Font = new Font("Poppins", 14F);
-            textHargaProduk.Location = new Point(139, 286);
+            textHargaProduk.Location = new Point(665, 272);
             textHargaProduk.Name = "textHargaProduk";
             textHargaProduk.Size = new Size(474, 49);
             textHargaProduk.TabIndex = 10;
@@ -111,7 +115,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Gilroy-Medium", 12F);
-            label3.Location = new Point(139, 245);
+            label3.Location = new Point(665, 231);
             label3.Name = "label3";
             label3.Size = new Size(163, 29);
             label3.TabIndex = 9;
@@ -120,7 +124,7 @@
             // textStokProduk
             // 
             textStokProduk.Font = new Font("Poppins", 14F);
-            textStokProduk.Location = new Point(139, 423);
+            textStokProduk.Location = new Point(665, 409);
             textStokProduk.Name = "textStokProduk";
             textStokProduk.Size = new Size(474, 49);
             textStokProduk.TabIndex = 12;
@@ -129,7 +133,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Gilroy-Medium", 12F);
-            label4.Location = new Point(139, 381);
+            label4.Location = new Point(665, 367);
             label4.Name = "label4";
             label4.Size = new Size(143, 29);
             label4.TabIndex = 11;
@@ -139,7 +143,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Gilroy-Medium", 12F);
-            label5.Location = new Point(139, 514);
+            label5.Location = new Point(665, 500);
             label5.Name = "label5";
             label5.Size = new Size(177, 29);
             label5.TabIndex = 13;
@@ -149,16 +153,52 @@
             // 
             comboKategori.Font = new Font("Poppins", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboKategori.FormattingEnabled = true;
-            comboKategori.Location = new Point(139, 558);
+            comboKategori.Location = new Point(665, 544);
             comboKategori.Name = "comboKategori";
             comboKategori.Size = new Size(474, 58);
             comboKategori.TabIndex = 14;
+            // 
+            // pressBrowse
+            // 
+            pressBrowse.AutoSize = true;
+            pressBrowse.Cursor = Cursors.Hand;
+            pressBrowse.Font = new Font("Gilroy-ExtraBold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            pressBrowse.ForeColor = Color.FromArgb(255, 145, 83);
+            pressBrowse.Location = new Point(239, 634);
+            pressBrowse.Name = "pressBrowse";
+            pressBrowse.Size = new Size(92, 30);
+            pressBrowse.TabIndex = 16;
+            pressBrowse.Text = "Browse";
+            pressBrowse.Click += pressBrowse_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Gilroy-Regular", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(326, 634);
+            label6.Name = "label6";
+            label6.Size = new Size(60, 29);
+            label6.TabIndex = 17;
+            label6.Text = "Files";
+            // 
+            // pictureProduct
+            // 
+            pictureProduct.BackColor = Color.White;
+            pictureProduct.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureProduct.Location = new Point(92, 111);
+            pictureProduct.Name = "pictureProduct";
+            pictureProduct.Size = new Size(500, 500);
+            pictureProduct.TabIndex = 18;
+            pictureProduct.TabStop = false;
             // 
             // Product_Form
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(761, 779);
+            ClientSize = new Size(1251, 779);
+            Controls.Add(pictureProduct);
+            Controls.Add(label6);
+            Controls.Add(pressBrowse);
             Controls.Add(comboKategori);
             Controls.Add(label5);
             Controls.Add(textStokProduk);
@@ -174,6 +214,7 @@
             Name = "Product_Form";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Product_Form";
+            ((System.ComponentModel.ISupportInitialize)pictureProduct).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -191,5 +232,8 @@
         private Label label4;
         private Label label5;
         private ComboBox comboKategori;
+        private Label pressBrowse;
+        private Label label6;
+        private PictureBox pictureProduct;
     }
 }
