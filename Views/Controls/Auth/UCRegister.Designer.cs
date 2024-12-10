@@ -206,9 +206,6 @@
         private TextBox textName;
         private ComboBox comboRole;
         private TextBox textPasskey;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
         private TextBox textUsername;
         private TextBox textConfirmPassword;
         private TextBox textPassword;

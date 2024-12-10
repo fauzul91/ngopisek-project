@@ -1,4 +1,5 @@
 ﻿using NgopiSek_Desktop_App_V2.App.Contexts;
+using NgopiSek_Desktop_App_V2.App.Core;
 using NgopiSek_Desktop_App_V2.Views.Forms;
 using System;
 using System.Collections.Generic;
@@ -30,11 +31,12 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls
             string username = textUsername.Text;
             string password = textPassword.Text;
 
-            int idRole;
-            bool isLoginSuccessful = AkunContext.Login(username, password, out idRole);
+            int idRole; int idPengguna;
+            bool isLoginSuccessful = AkunContext.Login(username, password, out idRole, out idPengguna);
 
             if (isLoginSuccessful)
             {
+                Session.CurrentUserId = idPengguna;
                 Form currentForm = this.FindForm(); // Dapatkan form Auth saat ini
 
                 if (idRole == 1)
@@ -56,7 +58,6 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls
                     homepageKasir.Show();
                 }
             }
-
             else
             {
                 MessageBox.Show("Data tidak valid.");

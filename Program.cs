@@ -1,3 +1,5 @@
+using NgopiSek_Desktop_App_V2.Views.Forms;
+
 namespace NgopiSek_Desktop_App_V2
 {
     internal static class Program

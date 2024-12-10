@@ -35,6 +35,7 @@
             searchBar = new Panel();
             textSearch = new TextBox();
             dataGridOrder = new DataGridView();
+            searchIcon = new Button();
             searchBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridOrder).BeginInit();
             SuspendLayout();
@@ -53,6 +54,7 @@
             searchBar.BackColor = Color.Transparent;
             searchBar.BackgroundImage = Properties.Resources.Search_Bar;
             searchBar.BackgroundImageLayout = ImageLayout.Stretch;
+            searchBar.Controls.Add(searchIcon);
             searchBar.Controls.Add(textSearch);
             searchBar.Location = new Point(89, 78);
             searchBar.Name = "searchBar";
@@ -112,6 +114,19 @@
             dataGridOrder.Size = new Size(1333, 743);
             dataGridOrder.TabIndex = 9;
             // 
+            // searchIcon
+            // 
+            searchIcon.BackColor = Color.Transparent;
+            searchIcon.FlatAppearance.BorderSize = 0;
+            searchIcon.FlatStyle = FlatStyle.Flat;
+            searchIcon.Image = Properties.Resources.Search_Icon;
+            searchIcon.Location = new Point(22, 16);
+            searchIcon.Name = "searchIcon";
+            searchIcon.Size = new Size(54, 45);
+            searchIcon.TabIndex = 3;
+            searchIcon.UseVisualStyleBackColor = false;
+            searchIcon.Click += searchIcon_Click_1;
+            // 
             // UCOrder
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -133,5 +148,6 @@
         private Panel searchBar;
         private TextBox textSearch;
         private DataGridView dataGridOrder;
+        private Button searchIcon;
     }
 }

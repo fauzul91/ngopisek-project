@@ -56,7 +56,7 @@
             btnLogout.FlatAppearance.BorderSize = 0;
             btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.Image = Properties.Resources.Logout;
-            btnLogout.Location = new Point(37, 952);
+            btnLogout.Location = new Point(46, 952);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(89, 74);
             btnLogout.TabIndex = 2;
@@ -69,7 +69,7 @@
             btnOrderHistory.FlatAppearance.BorderSize = 0;
             btnOrderHistory.FlatStyle = FlatStyle.Flat;
             btnOrderHistory.Image = Properties.Resources.Order_Icon;
-            btnOrderHistory.Location = new Point(39, 382);
+            btnOrderHistory.Location = new Point(45, 382);
             btnOrderHistory.Name = "btnOrderHistory";
             btnOrderHistory.Size = new Size(89, 74);
             btnOrderHistory.TabIndex = 1;
@@ -82,7 +82,7 @@
             btnHome.FlatAppearance.BorderSize = 0;
             btnHome.FlatStyle = FlatStyle.Flat;
             btnHome.Image = Properties.Resources.Home_Icon;
-            btnHome.Location = new Point(39, 251);
+            btnHome.Location = new Point(45, 251);
             btnHome.Name = "btnHome";
             btnHome.Size = new Size(89, 74);
             btnHome.TabIndex = 0;

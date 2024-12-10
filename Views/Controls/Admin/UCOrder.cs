@@ -83,7 +83,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
                     column.HeaderText = column.Name switch
                     {
                         "tanggal_transaksi" => "Tanggal Transaksi",
-                        "customer_name" => "Nama Pelanggan",
+                        "nama_customer" => "Nama Pelanggan",
                         "nama_metode_pembayaran" => "Nama Metode Pembayaran",
                         "nama_kasir" => "Nama Kasir",
                         _ => column.HeaderText
@@ -111,6 +111,54 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
         private void DataGridOrder_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             AddRowNumbers();
+        }
+        
+        private void searchIcon_Click_1(object sender, EventArgs e)
+        {
+            string searchText = textSearch.Text.Trim();
+
+            if (string.IsNullOrEmpty(searchText))
+            {
+                MessageBox.Show("Please enter a search term.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                LoadDataTransaksi();
+            }
+            if (!DateTime.TryParse(searchText, out DateTime parsedDate))
+            {
+                MessageBox.Show("Please enter a valid date in the format YYYY-MM-DD.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            try
+            {
+                var searchResults = TransaksiContext.SearchTransaksi(searchText);
+
+                if (searchResults != null && searchResults.Rows.Count > 0)
+                {
+                    dataGridOrder.DataSource = searchResults;
+                    if (!dataGridOrder.Columns.Contains("Nomor"))
+                    {
+                        var nomorColumn = new DataGridViewTextBoxColumn
+                        {
+                            HeaderText = "Nomor",
+                            Name = "Nomor",
+                            ReadOnly = true,
+                            Width = 50
+                        };
+                        dataGridOrder.Columns.Insert(0, nomorColumn);
+                    }                    
+
+                    AddRowNumbers();
+                }
+                else
+                {
+                    MessageBox.Show("No product found matching your search.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadDataTransaksi();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while searching: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LoadDataTransaksi();
+            }
         }
     }
 }

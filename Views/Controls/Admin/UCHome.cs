@@ -160,7 +160,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
                     column.HeaderText = column.Name switch
                     {
                         "tanggal_transaksi" => "Tanggal Transaksi",
-                        "customer_name" => "Nama Pelanggan",
+                        "nama_customer" => "Nama Pelanggan",
                         "nama_metode_pembayaran" => "Metode Pembayaran",
                         "nama_kasir" => "Nama Kasir",
                         _ => column.HeaderText

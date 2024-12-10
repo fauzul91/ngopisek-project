@@ -51,12 +51,12 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
 
                         using (var updateForm = new Product_Form())
                         {
-                            updateForm.PopulateForm(produk); // Isi form dengan data produk
+                            updateForm.PopulateForm(produk); 
                             updateForm.ShowDialog();
 
                             if (updateForm.DialogResult == DialogResult.OK)
                             {
-                                LoadDataProduk(); // Refresh grid
+                                LoadDataProduk(); 
                             }
                         }
                     }
@@ -86,13 +86,20 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
                 dataGridProduct.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dataGridProduct.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 dataGridProduct.ReadOnly = true;
-
+           
                 var dataProduk = ProductContext.All();
 
                 if (dataProduk == null || dataProduk.Rows.Count == 0)
                 {
                     MessageBox.Show("No product data available.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
+                }
+
+                var produkHabis = dataProduk.AsEnumerable().Where(row => row.Field<int>("stok_produk") < 20).ToList();
+
+                if (produkHabis.Any())
+                {
+                    MessageBox.Show("Peringatan, Beberapa stok produk anda menipis!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 dataGridProduct.Columns.Clear();
@@ -173,12 +180,12 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
                     HeaderText = columnName,
                     Text = buttonText,
                     UseColumnTextForButtonValue = true,
-                    Width = 80
+                    Width = 80,                              
                 };
                 dataGridProduct.Columns.Add(buttonColumn);
             }
         }
-
+        
         private void searchIcon_Click(object sender, EventArgs e)
         {
             string searchText = textSearch.Text.Trim();

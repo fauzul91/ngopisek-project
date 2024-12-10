@@ -19,6 +19,9 @@
     <Compile Update="Views\Controls\Auth\UCRegister.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\Controls\Kasir\UC_HomeKasir.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\Forms\Auth Form.cs">
       <SubType>Form</SubType>
     </Compile>

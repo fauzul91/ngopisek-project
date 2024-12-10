@@ -25,7 +25,9 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
 
             if (result == DialogResult.Yes)
             {
-                this.Close();
+                this.Hide();
+                Authentication auth = new Authentication();
+                auth.ShowDialog();
             }
         }
 

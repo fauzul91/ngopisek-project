@@ -26,7 +26,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
-        {
+        {            
             if (!ValidateInput())
             {
                 MessageBox.Show("Input tidak valid. Harap isi semua data dengan benar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -73,7 +73,8 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
         {
             if (string.IsNullOrWhiteSpace(textNamaProduk.Text) ||
                 !int.TryParse(textHargaProduk.Text, out _) ||
-                !int.TryParse(textStokProduk.Text, out _) ||
+                !int.TryParse(textStokProduk.Text, out int stokProduk) ||
+                stokProduk < 0 ||
                 comboKategori.SelectedIndex < 0)
             {
                 return false;
@@ -105,15 +106,17 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
             textNamaProduk.Text = produk.nama_produk;
             textHargaProduk.Text = produk.harga_produk.ToString();
             textStokProduk.Text = produk.stok_produk.ToString();
+            
             comboKategori.SelectedValue = produk.id_kategori;
 
             if (produk.foto_produk != null && produk.foto_produk.Length > 0)
             {
                 pictureProduct.Image = ConvertByteArrayToImage(produk.foto_produk);
             }
+            
             else
             {
-                pictureProduct.Image = null; // Jika tidak ada gambar, kosongkan PictureBox
+                pictureProduct.Image = null; 
             }
 
             IsEditMode = true;
