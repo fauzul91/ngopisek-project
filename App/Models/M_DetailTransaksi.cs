@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NgopiSek_Desktop_App_V2.App.Models
 {
-    internal class M_DetailTransaksi
+    public class M_DetailTransaksi
     {
         [Key]
         public int id_detail_transaksi { get; set; }

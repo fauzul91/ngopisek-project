@@ -42,7 +42,7 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
         public static DataTable CountCustomers()
         {
             string query = @"
-            SELECT COUNT(DISTINCT tr.customer_name) AS total_customer
+            SELECT COUNT(tr.nama_customer) AS total_customer
             FROM transaksi tr";
 
             DataTable dataCustomers = queryExecutor(query);
@@ -62,7 +62,7 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
             SELECT 
                 tr.id_transaksi, 
                 tr.tanggal_transaksi, 
-                tr.customer_name, 
+                tr.nama_customer, 
                 m.nama_metode_pembayaran, 
                 p.nama_pengguna as nama_kasir 
             FROM transaksi tr

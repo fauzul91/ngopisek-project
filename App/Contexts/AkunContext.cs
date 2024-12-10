@@ -83,17 +83,18 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
                 return false;
             }
         }
-        public static bool Login(string username, string password, out int idRole)
+        public static bool Login(string username, string password, out int idRole, out int idPengguna)
         {
-            string query = "SELECT id_role FROM pengguna WHERE username_pengguna = @username AND password_pengguna = @password";
+            string query = "SELECT id_role, id_pengguna FROM pengguna WHERE username_pengguna = @username AND password_pengguna = @password";
 
             NpgsqlParameter[] parameters = new NpgsqlParameter[]
             {
-                new NpgsqlParameter("@username", username),
-                new NpgsqlParameter("@password", password),
+        new NpgsqlParameter("@username", username),
+        new NpgsqlParameter("@password", password),
             };
 
             idRole = 0;
+            idPengguna = 0;
 
             try
             {
@@ -102,15 +103,16 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
                 command.Parameters.Clear();
                 command.Parameters.AddRange(parameters);
 
-                object result = command.ExecuteScalar();
-                closeConnection();
-
-                if (result != null)
+                using (var reader = command.ExecuteReader())
                 {
-                    idRole = Convert.ToInt32(result);
-                    return true; // Login sukses
+                    if (reader.Read())
+                    {
+                        idRole = Convert.ToInt32(reader["id_role"]);
+                        idPengguna = Convert.ToInt32(reader["id_pengguna"]);
+                        return true; // Login sukses
+                    }
                 }
-
+                closeConnection();
                 return false;
             }
             catch (Exception ex)
@@ -120,5 +122,6 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
                 return false;
             }
         }
+
     }
 }

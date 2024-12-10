@@ -11,7 +11,7 @@ namespace NgopiSek_Desktop_App_V2.App.Core
     public class DatabaseWrapper
     {
         private static readonly string DB_HOST = "localhost";
-        private static readonly string DB_DATABASE = "NgopiSek";
+        private static readonly string DB_DATABASE = "NgopiSek Update";
         private static readonly string DB_USERNAME = "postgres";
         private static readonly string DB_PASSWORD = "123";
         private static readonly string DB_PORT = "5432";
