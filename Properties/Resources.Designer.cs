@@ -113,6 +113,26 @@ namespace NgopiSek_Desktop_App_V2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Background_Order_Details {
+            get {
+                object obj = ResourceManager.GetObject("Background Order Details", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Background_Payment_Method {
+            get {
+                object obj = ResourceManager.GetObject("Background Payment Method", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap basket_svgrepo_com_1 {
             get {
                 object obj = ResourceManager.GetObject("basket-svgrepo-com 1", resourceCulture);
@@ -136,6 +156,16 @@ namespace NgopiSek_Desktop_App_V2.Properties {
         internal static System.Drawing.Bitmap Cust_Information {
             get {
                 object obj = ResourceManager.GetObject("Cust Information", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Customer_Name {
+            get {
+                object obj = ResourceManager.GetObject("Customer Name", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

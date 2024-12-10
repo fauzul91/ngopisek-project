@@ -121,6 +121,9 @@
   <data name="Top Bar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Top Bar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Recent Invoice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Recent Invoice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,6 +151,9 @@
   <data name="Side Login Panel Andre" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Side Login Panel Andre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Customer Name" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Customer Name.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Order Summary" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Order Summary.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -156,9 +162,6 @@
   </data>
   <data name="Order Details" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Order Details.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Search Bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search Bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Add Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,6 +181,9 @@
   <data name="Product Panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product Panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Log Out" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Log Out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Side Homepage Admin Panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Side Homepage Admin Panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -186,6 +192,9 @@
   </data>
   <data name="Cust Information" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cust Information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Side Panel Homepage kasir1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Side Panel Homepage kasir1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Home Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -201,9 +210,6 @@
   </data>
   <data name="Login Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Login Form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="product-svgrepo-com 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\product-svgrepo-com 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Starbucks-Strawberry" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Starbucks-Strawberry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,8 +229,8 @@
   <data name="Add Product-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add Product-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Log Out" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Log Out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Search Bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search Bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Top Bar Kasir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Top Bar Kasir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,10 +244,13 @@
   <data name="Top 5 Products" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Top 5 Products.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Recent Invoice" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Recent Invoice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="product-svgrepo-com 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\product-svgrepo-com 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Side Panel Homepage kasir1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Side Panel Homepage kasir1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Background Order Details" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background Order Details.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Background Payment Method" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background Payment Method.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
