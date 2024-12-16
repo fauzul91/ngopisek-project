@@ -1,13 +1,8 @@
 ﻿using NgopiSek_Desktop_App_V2.App.Contexts;
 using NgopiSek_Desktop_App_V2.App.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace NgopiSek_Desktop_App_V2.Views.Forms
@@ -26,7 +21,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
-        {            
+        {
             if (!ValidateInput())
             {
                 MessageBox.Show("Input tidak valid. Harap isi semua data dengan benar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -39,7 +34,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
                 harga_produk = int.Parse(textHargaProduk.Text),
                 stok_produk = int.Parse(textStokProduk.Text),
                 id_kategori = (int)comboKategori.SelectedValue,
-                foto_produk = ConvertImageToByteArray(pictureProduct.Image) // Konversi gambar ke byte array
+                foto_produk = ConvertImageToByteArray(pictureProduct.Image) // Convert image to byte array
             };
 
             try
@@ -64,6 +59,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
                 MessageBox.Show($"Terjadi kesalahan saat menyimpan produk: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -88,6 +84,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
             textHargaProduk.Clear();
             textStokProduk.Clear();
             comboKategori.SelectedIndex = -1;
+            pictureProduct.Image = Properties.Resources.Starbucks_Strawberry; // Default image
         }
 
         private void LoadCategoryData()
@@ -106,17 +103,23 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
             textNamaProduk.Text = produk.nama_produk;
             textHargaProduk.Text = produk.harga_produk.ToString();
             textStokProduk.Text = produk.stok_produk.ToString();
-            
             comboKategori.SelectedValue = produk.id_kategori;
 
             if (produk.foto_produk != null && produk.foto_produk.Length > 0)
             {
-                pictureProduct.Image = ConvertByteArrayToImage(produk.foto_produk);
+                try
+                {
+                    pictureProduct.Image = ConvertByteArrayToImage(produk.foto_produk);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Gagal memuat gambar produk: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    pictureProduct.Image = Properties.Resources.Starbucks_Strawberry;
+                }
             }
-            
             else
             {
-                pictureProduct.Image = null; 
+                pictureProduct.Image = Properties.Resources.Starbucks_Strawberry;
             }
 
             IsEditMode = true;
@@ -137,8 +140,15 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
                 openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    pictureProduct.Image = Image.FromFile(openFileDialog.FileName);
-                    pictureProduct.SizeMode = PictureBoxSizeMode.Zoom; // Atur ulang untuk memastikan
+                    try
+                    {
+                        pictureProduct.Image = Image.FromFile(openFileDialog.FileName);
+                        pictureProduct.SizeMode = PictureBoxSizeMode.Zoom;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Gagal memuat gambar: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -147,20 +157,37 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
         {
             if (image == null) return null;
 
-            using (var ms = new MemoryStream())
+            try
             {
-                image.Save(ms, System.Drawing.Imaging.ImageFormat.Png); // Simpan dalam format PNG
-                return ms.ToArray();
+                using (var ms = new MemoryStream())
+                {
+                    image.Save(ms, System.Drawing.Imaging.ImageFormat.Png); // Save as PNG format
+                    return ms.ToArray();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Gagal mengonversi gambar ke byte array: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
             }
         }
 
         private Image ConvertByteArrayToImage(byte[] imageData)
         {
-            if (imageData == null || imageData.Length == 0) return null;
+            if (imageData == null || imageData.Length == 0)
+                return Properties.Resources.Starbucks_Strawberry;
 
-            using (var ms = new MemoryStream(imageData))
+            try
             {
-                return Image.FromStream(ms);
+                using (var ms = new MemoryStream(imageData))
+                {
+                    return Image.FromStream(ms);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Gagal mengkonversi gambar: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return Properties.Resources.Starbucks_Strawberry;
             }
         }
     }

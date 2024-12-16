@@ -44,6 +44,7 @@
             // 
             // panelAuth
             // 
+            panelAuth.BackColor = Color.FromArgb(246, 246, 246);
             panelAuth.Dock = DockStyle.Right;
             panelAuth.Location = new Point(747, 0);
             panelAuth.Name = "panelAuth";

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btnEye = new Button();
             textPassword = new TextBox();
             textUsername = new TextBox();
             btnLogin = new Button();
@@ -41,12 +42,27 @@
             // 
             panel1.BackgroundImage = Properties.Resources.Login_Form;
             panel1.BackgroundImageLayout = ImageLayout.Zoom;
+            panel1.Controls.Add(btnEye);
             panel1.Controls.Add(textPassword);
             panel1.Controls.Add(textUsername);
             panel1.Location = new Point(222, 199);
             panel1.Name = "panel1";
             panel1.Size = new Size(680, 559);
             panel1.TabIndex = 0;
+            // 
+            // btnEye
+            // 
+            btnEye.BackColor = Color.FromArgb(247, 250, 252);
+            btnEye.BackgroundImage = Properties.Resources.eye_svgrepo_com;
+            btnEye.BackgroundImageLayout = ImageLayout.Stretch;
+            btnEye.FlatAppearance.BorderSize = 0;
+            btnEye.FlatStyle = FlatStyle.Flat;
+            btnEye.Location = new Point(607, 484);
+            btnEye.Name = "btnEye";
+            btnEye.Size = new Size(40, 40);
+            btnEye.TabIndex = 2;
+            btnEye.UseVisualStyleBackColor = false;
+            btnEye.Click += btnEye_Click;
             // 
             // textPassword
             // 
@@ -115,6 +131,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(246, 246, 246);
             Controls.Add(label1);
             Controls.Add(pressRegister);
             Controls.Add(btnLogin);
@@ -135,5 +152,6 @@
         private Label pressRegister;
         private TextBox textPassword;
         private Label label1;
+        private Button btnEye;
     }
 }

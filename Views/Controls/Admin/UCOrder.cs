@@ -1,4 +1,5 @@
 ﻿using NgopiSek_Desktop_App_V2.App.Contexts;
+using NgopiSek_Desktop_App_V2.Views.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,12 +17,6 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
         public UCOrder()
         {
             InitializeComponent();
-        }
-
-        private void dataGridOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex < 0) return;
-
         }
 
         private void UCOrder_Load(object sender, EventArgs e)
@@ -60,6 +55,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
                 dataGridOrder.Columns.Add(nomorColumn);
                 dataGridOrder.DataSource = dataTransaksi;
 
+                AddButtonColumn("Aksi", "Detail");
                 CustomizeColumnHeaders();
             }
             catch (Exception ex)
@@ -84,7 +80,8 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
                     {
                         "tanggal_transaksi" => "Tanggal Transaksi",
                         "nama_customer" => "Nama Pelanggan",
-                        "nama_metode_pembayaran" => "Nama Metode Pembayaran",
+                        "nama_metode_pembayaran" => "Metode Pembayaran",
+                        "nama_metode_pesanan" => "Metode Pesanan",
                         "nama_kasir" => "Nama Kasir",
                         _ => column.HeaderText
                     };
@@ -108,11 +105,26 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
             }
         }
 
+        private void AddButtonColumn(string columnName, string buttonText)
+        {
+            if (!dataGridOrder.Columns.Contains(columnName))
+            {
+                var buttonColumn = new DataGridViewButtonColumn
+                {
+                    Name = columnName,
+                    HeaderText = columnName,
+                    Text = buttonText,
+                    UseColumnTextForButtonValue = true,
+                    Width = 80,
+                };
+                dataGridOrder.Columns.Add(buttonColumn);
+            }
+        }
         private void DataGridOrder_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             AddRowNumbers();
         }
-        
+
         private void searchIcon_Click_1(object sender, EventArgs e)
         {
             string searchText = textSearch.Text.Trim();
@@ -144,7 +156,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
                             Width = 50
                         };
                         dataGridOrder.Columns.Insert(0, nomorColumn);
-                    }                    
+                    }
 
                     AddRowNumbers();
                 }
@@ -158,6 +170,25 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
             {
                 MessageBox.Show($"An error occurred while searching: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 LoadDataTransaksi();
+            }
+        }
+
+        private void dataGridOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            if (e.ColumnIndex == dataGridOrder.Columns["Aksi"].Index)
+            {
+                try
+                {
+                    var row = dataGridOrder.Rows[e.RowIndex];
+                    int idTransaksi = Convert.ToInt32(row.Cells["id_transaksi"].Value);
+                    DetailPesanan detailPesanan = new DetailPesanan(idTransaksi);
+                    detailPesanan.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Data tidak ada! Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

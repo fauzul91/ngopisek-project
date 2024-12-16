@@ -1,4 +1,5 @@
 ﻿using NgopiSek_Desktop_App_V2.App.Contexts;
+using NgopiSek_Desktop_App_V2.App.Core;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,8 +19,26 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
             InitializeComponent();
             LoadHomeData();
             LoadTop5Products();
+            LoadUsername();
         }
 
+        private void LoadUsername()
+        {
+            try
+            {
+                int idPengguna = Session.CurrentUserId;
+                DataTable usernameData = HomeContext.GetUsername(idPengguna);
+                if (usernameData != null && usernameData.Rows.Count > 0)
+                {
+                    textName.Text = usernameData.Rows[0]["nama_pengguna"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                textName.Text = "Error"; 
+                Console.WriteLine("Error loading username: " + ex.Message);
+            }            
+        }
         private void LoadHomeData()
         {
             DataTable salesData = HomeContext.GetSummarySales();
@@ -56,12 +75,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
                 Panel productPanel = new Panel();
                 productPanel.Width = 250;   
                 productPanel.Height = 90;   
-                productPanel.Margin = new Padding(
-                    (flowTop5Products.Width - productPanel.Width) / 2, 
-                    3, 
-                    0, 
-                    3  
-                );
+                productPanel.Margin = new Padding((flowTop5Products.Width - productPanel.Width) / 2, 3, 0, 3);
 
                 PictureBox pictureBox = new PictureBox();
                 pictureBox.Width = 80;    
@@ -75,7 +89,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
                 }
                 else
                 {
-                    pictureBox.Image = Properties.Resources.Americano;
+                    pictureBox.Image = Properties.Resources.Starbucks_Strawberry;
                 }
 
                 Label label = new Label();
@@ -84,7 +98,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
                 label.AutoSize = false; 
                 label.Width = 150; 
                 label.Height = 80; 
-                label.Font = new Font("Gilroy-☞", 10, FontStyle.Regular);
+                label.Font = new Font("Gilroy", 10, FontStyle.Regular);
                 label.Location = new Point(90, 5); 
 
                 productPanel.Controls.Add(pictureBox);
@@ -141,7 +155,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading transaction data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error loading transaction data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                
             }
         }
 
@@ -162,6 +176,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
                         "tanggal_transaksi" => "Tanggal Transaksi",
                         "nama_customer" => "Nama Pelanggan",
                         "nama_metode_pembayaran" => "Metode Pembayaran",
+                        "nama_metode_pesanan" => "Metode Pesanan",
                         "nama_kasir" => "Nama Kasir",
                         _ => column.HeaderText
                     };

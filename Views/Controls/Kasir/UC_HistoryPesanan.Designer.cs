@@ -1,6 +1,6 @@
-﻿namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
+﻿namespace NgopiSek_Desktop_App_V2.Views.Controls.Kasir
 {
-    partial class UCCategory
+    partial class UC_HistoryPesanan
     {
         /// <summary> 
         /// Required designer variable.
@@ -35,20 +35,19 @@
             searchBar = new Panel();
             searchIcon = new Button();
             textSearch = new TextBox();
-            btnAddCategory = new Button();
-            dataGridCategory = new DataGridView();
+            dataGridHistoryOrder = new DataGridView();
             searchBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridCategory).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridHistoryOrder).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackgroundImage = Properties.Resources.Kategori;
+            panel1.BackgroundImage = Properties.Resources.Pesanan;
             panel1.BackgroundImageLayout = ImageLayout.Zoom;
-            panel1.Location = new Point(89, 248);
+            panel1.Location = new Point(65, 248);
             panel1.Name = "panel1";
             panel1.Size = new Size(234, 57);
-            panel1.TabIndex = 5;
+            panel1.TabIndex = 11;
             // 
             // searchBar
             // 
@@ -57,10 +56,10 @@
             searchBar.BackgroundImageLayout = ImageLayout.Stretch;
             searchBar.Controls.Add(searchIcon);
             searchBar.Controls.Add(textSearch);
-            searchBar.Location = new Point(89, 78);
+            searchBar.Location = new Point(65, 82);
             searchBar.Name = "searchBar";
             searchBar.Size = new Size(748, 85);
-            searchBar.TabIndex = 4;
+            searchBar.TabIndex = 10;
             // 
             // searchIcon
             // 
@@ -68,10 +67,10 @@
             searchIcon.FlatAppearance.BorderSize = 0;
             searchIcon.FlatStyle = FlatStyle.Flat;
             searchIcon.Image = Properties.Resources.Search_Icon;
-            searchIcon.Location = new Point(22, 14);
+            searchIcon.Location = new Point(22, 16);
             searchIcon.Name = "searchIcon";
             searchIcon.Size = new Size(54, 45);
-            searchIcon.TabIndex = 1;
+            searchIcon.TabIndex = 3;
             searchIcon.UseVisualStyleBackColor = false;
             searchIcon.Click += searchIcon_Click;
             // 
@@ -80,39 +79,20 @@
             textSearch.BorderStyle = BorderStyle.None;
             textSearch.Cursor = Cursors.IBeam;
             textSearch.Font = new Font("Gilroy-Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textSearch.Location = new Point(87, 24);
+            textSearch.Location = new Point(85, 24);
             textSearch.Name = "textSearch";
             textSearch.Size = new Size(611, 30);
             textSearch.TabIndex = 0;
             // 
-            // btnAddCategory
+            // dataGridHistoryOrder
             // 
-            btnAddCategory.BackColor = Color.FromArgb(255, 145, 83);
-            btnAddCategory.FlatAppearance.BorderSize = 0;
-            btnAddCategory.FlatStyle = FlatStyle.Flat;
-            btnAddCategory.Font = new Font("Gilroy-SemiBold", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAddCategory.ForeColor = Color.White;
-            btnAddCategory.Image = Properties.Resources.Add_Icon;
-            btnAddCategory.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAddCategory.Location = new Point(1147, 233);
-            btnAddCategory.Name = "btnAddCategory";
-            btnAddCategory.Padding = new Padding(15, 0, 0, 0);
-            btnAddCategory.Size = new Size(275, 72);
-            btnAddCategory.TabIndex = 7;
-            btnAddCategory.Text = "  Add new category";
-            btnAddCategory.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnAddCategory.UseVisualStyleBackColor = false;
-            btnAddCategory.Click += btnAddCategory_Click;
-            // 
-            // dataGridCategory
-            // 
-            dataGridCategory.AllowUserToOrderColumns = true;
-            dataGridCategory.AllowUserToResizeColumns = false;
-            dataGridCategory.AllowUserToResizeRows = false;
-            dataGridCategory.BackgroundColor = Color.White;
-            dataGridCategory.BorderStyle = BorderStyle.None;
-            dataGridCategory.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridCategory.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridHistoryOrder.AllowUserToOrderColumns = true;
+            dataGridHistoryOrder.AllowUserToResizeColumns = false;
+            dataGridHistoryOrder.AllowUserToResizeRows = false;
+            dataGridHistoryOrder.BackgroundColor = Color.White;
+            dataGridHistoryOrder.BorderStyle = BorderStyle.Fixed3D;
+            dataGridHistoryOrder.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridHistoryOrder.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.White;
             dataGridViewCellStyle1.Font = new Font("Gilroy-Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -120,13 +100,13 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.White;
             dataGridViewCellStyle1.SelectionForeColor = Color.Black;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridCategory.ColumnHeadersHeight = 75;
-            dataGridCategory.EnableHeadersVisualStyles = false;
-            dataGridCategory.GridColor = Color.White;
-            dataGridCategory.Location = new Point(89, 346);
-            dataGridCategory.Name = "dataGridCategory";
-            dataGridCategory.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridHistoryOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridHistoryOrder.ColumnHeadersHeight = 75;
+            dataGridHistoryOrder.EnableHeadersVisualStyles = false;
+            dataGridHistoryOrder.GridColor = Color.White;
+            dataGridHistoryOrder.Location = new Point(65, 350);
+            dataGridHistoryOrder.Name = "dataGridHistoryOrder";
+            dataGridHistoryOrder.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
             dataGridViewCellStyle2.Font = new Font("Gilroy-Regular", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -134,44 +114,43 @@
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(255, 145, 83);
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridCategory.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridHistoryOrder.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridHistoryOrder.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.Font = new Font("Gilroy-Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle3.ForeColor = Color.FromArgb(53, 53, 53);
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(255, 145, 83);
             dataGridViewCellStyle3.SelectionForeColor = Color.White;
-            dataGridCategory.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridCategory.RowTemplate.Height = 50;
-            dataGridCategory.ScrollBars = ScrollBars.Vertical;
-            dataGridCategory.Size = new Size(1333, 743);
-            dataGridCategory.TabIndex = 8;
-            dataGridCategory.CellContentClick += dataGridCategory_CellContentClick_1;
+            dataGridHistoryOrder.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridHistoryOrder.RowTemplate.Height = 50;
+            dataGridHistoryOrder.ScrollBars = ScrollBars.Vertical;
+            dataGridHistoryOrder.Size = new Size(1559, 743);
+            dataGridHistoryOrder.TabIndex = 12;
+            dataGridHistoryOrder.CellContentClick += dataGridHistoryOrder_CellContentClick;
             // 
-            // UCCategory
+            // UC_HistoryPesanan
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(246, 246, 246);
-            Controls.Add(dataGridCategory);
-            Controls.Add(btnAddCategory);
             Controls.Add(panel1);
             Controls.Add(searchBar);
-            Name = "UCCategory";
-            Size = new Size(1510, 1166);
-            Load += UCCategory_Load;
+            Controls.Add(dataGridHistoryOrder);
+            Name = "UC_HistoryPesanan";
+            Size = new Size(1730, 1174);
+            Load += UC_HistoryPesanan_Load;
             searchBar.ResumeLayout(false);
             searchBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridCategory).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridHistoryOrder).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
         private Panel panel1;
         private Panel searchBar;
-        private TextBox textSearch;
-        private Button btnAddCategory;
-        private DataGridView dataGridCategory;
         private Button searchIcon;
+        private TextBox textSearch;
+        private DataGridView dataGridHistoryOrder;
     }
 }

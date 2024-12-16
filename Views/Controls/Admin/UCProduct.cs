@@ -70,6 +70,27 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
                     MessageBox.Show($"Error handling update action: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+            if (e.ColumnIndex == dataGridProduct.Columns["Delete"].Index)
+            {
+                try
+                {
+                    var result = MessageBox.Show("Apakah anda yakin ingin menghapus produk ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    
+                    if (result == DialogResult.Yes)
+                    {
+                        var idProduk = Convert.ToInt32(dataGridProduct.Rows[e.RowIndex].Cells["id_produk"].Value);
+                        ProductContext.DeleteProduct(idProduk);
+                        MessageBox.Show("Produk berhasil dihapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        LoadDataProduk();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error handling delete action: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void UCProduk_Load(object sender, EventArgs e)
@@ -117,6 +138,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
 
                 CustomizeColumnHeaders();
                 AddButtonColumn("Update", "Edit");
+                AddButtonColumn("Delete", "Hapus");
                 AddRowNumbers();
             }
             catch (Exception ex)
@@ -180,7 +202,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
                     HeaderText = columnName,
                     Text = buttonText,
                     UseColumnTextForButtonValue = true,
-                    Width = 80,                              
+                    Width = 80,
                 };
                 dataGridProduct.Columns.Add(buttonColumn);
             }
@@ -218,6 +240,11 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
                     if (!dataGridProduct.Columns.Contains("Update"))
                     {
                         AddButtonColumn("Update", "Edit");
+                    }
+
+                    if (!dataGridProduct.Columns.Contains("Delete"))
+                    {
+                        AddButtonColumn("Delete", "Hapus");
                     }
 
                     AddRowNumbers();

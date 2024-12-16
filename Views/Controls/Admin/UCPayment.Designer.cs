@@ -1,6 +1,6 @@
 ﻿namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
 {
-    partial class UCCategory
+    partial class UCPayment
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,24 +31,15 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            panel1 = new Panel();
             searchBar = new Panel();
             searchIcon = new Button();
             textSearch = new TextBox();
-            btnAddCategory = new Button();
-            dataGridCategory = new DataGridView();
+            btnAddPayment = new Button();
+            dataGridPayment = new DataGridView();
+            panel1 = new Panel();
             searchBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridCategory).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridPayment).BeginInit();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackgroundImage = Properties.Resources.Kategori;
-            panel1.BackgroundImageLayout = ImageLayout.Zoom;
-            panel1.Location = new Point(89, 248);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(234, 57);
-            panel1.TabIndex = 5;
             // 
             // searchBar
             // 
@@ -71,7 +62,7 @@
             searchIcon.Location = new Point(22, 14);
             searchIcon.Name = "searchIcon";
             searchIcon.Size = new Size(54, 45);
-            searchIcon.TabIndex = 1;
+            searchIcon.TabIndex = 2;
             searchIcon.UseVisualStyleBackColor = false;
             searchIcon.Click += searchIcon_Click;
             // 
@@ -80,39 +71,39 @@
             textSearch.BorderStyle = BorderStyle.None;
             textSearch.Cursor = Cursors.IBeam;
             textSearch.Font = new Font("Gilroy-Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textSearch.Location = new Point(87, 24);
+            textSearch.Location = new Point(86, 24);
             textSearch.Name = "textSearch";
             textSearch.Size = new Size(611, 30);
             textSearch.TabIndex = 0;
             // 
-            // btnAddCategory
+            // btnAddPayment
             // 
-            btnAddCategory.BackColor = Color.FromArgb(255, 145, 83);
-            btnAddCategory.FlatAppearance.BorderSize = 0;
-            btnAddCategory.FlatStyle = FlatStyle.Flat;
-            btnAddCategory.Font = new Font("Gilroy-SemiBold", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAddCategory.ForeColor = Color.White;
-            btnAddCategory.Image = Properties.Resources.Add_Icon;
-            btnAddCategory.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAddCategory.Location = new Point(1147, 233);
-            btnAddCategory.Name = "btnAddCategory";
-            btnAddCategory.Padding = new Padding(15, 0, 0, 0);
-            btnAddCategory.Size = new Size(275, 72);
-            btnAddCategory.TabIndex = 7;
-            btnAddCategory.Text = "  Add new category";
-            btnAddCategory.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnAddCategory.UseVisualStyleBackColor = false;
-            btnAddCategory.Click += btnAddCategory_Click;
+            btnAddPayment.BackColor = Color.FromArgb(255, 145, 83);
+            btnAddPayment.FlatAppearance.BorderSize = 0;
+            btnAddPayment.FlatStyle = FlatStyle.Flat;
+            btnAddPayment.Font = new Font("Gilroy-SemiBold", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAddPayment.ForeColor = Color.White;
+            btnAddPayment.Image = Properties.Resources.Add_Icon;
+            btnAddPayment.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAddPayment.Location = new Point(1147, 233);
+            btnAddPayment.Name = "btnAddPayment";
+            btnAddPayment.Padding = new Padding(20, 0, 0, 0);
+            btnAddPayment.Size = new Size(275, 72);
+            btnAddPayment.TabIndex = 7;
+            btnAddPayment.Text = "  Add new payment";
+            btnAddPayment.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAddPayment.UseVisualStyleBackColor = false;
+            btnAddPayment.Click += btnAddPayment_Click;
             // 
-            // dataGridCategory
+            // dataGridPayment
             // 
-            dataGridCategory.AllowUserToOrderColumns = true;
-            dataGridCategory.AllowUserToResizeColumns = false;
-            dataGridCategory.AllowUserToResizeRows = false;
-            dataGridCategory.BackgroundColor = Color.White;
-            dataGridCategory.BorderStyle = BorderStyle.None;
-            dataGridCategory.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridCategory.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridPayment.AllowUserToOrderColumns = true;
+            dataGridPayment.AllowUserToResizeColumns = false;
+            dataGridPayment.AllowUserToResizeRows = false;
+            dataGridPayment.BackgroundColor = Color.White;
+            dataGridPayment.BorderStyle = BorderStyle.None;
+            dataGridPayment.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridPayment.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.White;
             dataGridViewCellStyle1.Font = new Font("Gilroy-Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -120,13 +111,13 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.White;
             dataGridViewCellStyle1.SelectionForeColor = Color.Black;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridCategory.ColumnHeadersHeight = 75;
-            dataGridCategory.EnableHeadersVisualStyles = false;
-            dataGridCategory.GridColor = Color.White;
-            dataGridCategory.Location = new Point(89, 346);
-            dataGridCategory.Name = "dataGridCategory";
-            dataGridCategory.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridPayment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridPayment.ColumnHeadersHeight = 75;
+            dataGridPayment.EnableHeadersVisualStyles = false;
+            dataGridPayment.GridColor = Color.White;
+            dataGridPayment.Location = new Point(89, 346);
+            dataGridPayment.Name = "dataGridPayment";
+            dataGridPayment.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
             dataGridViewCellStyle2.Font = new Font("Gilroy-Regular", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -134,44 +125,54 @@
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(255, 145, 83);
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridCategory.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridPayment.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridPayment.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.Font = new Font("Gilroy-Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle3.ForeColor = Color.FromArgb(53, 53, 53);
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(255, 145, 83);
             dataGridViewCellStyle3.SelectionForeColor = Color.White;
-            dataGridCategory.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridCategory.RowTemplate.Height = 50;
-            dataGridCategory.ScrollBars = ScrollBars.Vertical;
-            dataGridCategory.Size = new Size(1333, 743);
-            dataGridCategory.TabIndex = 8;
-            dataGridCategory.CellContentClick += dataGridCategory_CellContentClick_1;
+            dataGridPayment.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridPayment.RowTemplate.Height = 50;
+            dataGridPayment.ScrollBars = ScrollBars.Vertical;
+            dataGridPayment.Size = new Size(1333, 743);
+            dataGridPayment.TabIndex = 6;
+            dataGridPayment.CellContentClick += dataGridPayment_CellContentClick;
             // 
-            // UCCategory
+            // panel1
+            // 
+            panel1.BackgroundImage = Properties.Resources.Metode_Pembayaran;
+            panel1.BackgroundImageLayout = ImageLayout.Zoom;
+            panel1.Location = new Point(89, 248);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(535, 59);
+            panel1.TabIndex = 5;
+            // 
+            // UCPayment
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(246, 246, 246);
-            Controls.Add(dataGridCategory);
-            Controls.Add(btnAddCategory);
-            Controls.Add(panel1);
             Controls.Add(searchBar);
-            Name = "UCCategory";
+            Controls.Add(btnAddPayment);
+            Controls.Add(dataGridPayment);
+            Controls.Add(panel1);
+            Name = "UCPayment";
             Size = new Size(1510, 1166);
-            Load += UCCategory_Load;
+            Load += UCPayment_Load;
             searchBar.ResumeLayout(false);
             searchBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridCategory).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridPayment).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-        private Panel panel1;
+
         private Panel searchBar;
-        private TextBox textSearch;
-        private Button btnAddCategory;
-        private DataGridView dataGridCategory;
         private Button searchIcon;
+        private TextBox textSearch;
+        private Button btnAddPayment;
+        private DataGridView dataGridPayment;
+        private Panel panel1;
     }
 }

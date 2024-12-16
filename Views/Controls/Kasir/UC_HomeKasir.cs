@@ -12,14 +12,13 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Kasir
 {
     public partial class UC_HomeKasir : UserControl
     {
-        public event Action<string, decimal> OnAddToCart;
-
         public UC_HomeKasir()
         {
             InitializeComponent();
             LoadCategoryButtons();
             LoadProductItems();
             LoadPaymentButtons();
+            LoadOrderMethodButtons();
         }
 
         private void LoadCategoryButtons()
@@ -384,18 +383,66 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Kasir
                 flowPaymentMethod.Controls.Add(btnPaymentMethod);
             }
         }
-
+        
         private int selectedPaymentMethodId = 0;
         private void btnPaymentMethod_Click(object sender, EventArgs e)
         {
             Button clickedButton = sender as Button;
-            selectedPaymentMethodId = int.Parse(clickedButton.Tag.ToString());
-
-            foreach (Button btn in flowPaymentMethod.Controls)
+            if (clickedButton != null)
             {
-                btn.BackColor = Color.White;
+                selectedPaymentMethodId = int.Parse(clickedButton.Tag.ToString());
+                foreach (Button btn in flowPaymentMethod.Controls)
+                {
+                    btn.BackColor = Color.White;
+                    btn.ForeColor = Color.Black;
+                }
+            }            
+            clickedButton.BackColor = ColorTranslator.FromHtml("#FF9153");
+            clickedButton.ForeColor = Color.White;
+        }
+
+        private void LoadOrderMethodButtons()
+        {
+            flowOrderMethod.Controls.Clear();
+            DataTable orderMethod = TransaksiContext.GetOrderMethod();
+
+            foreach (DataRow row in orderMethod.Rows)
+            {
+                Button btnOrderMethod = new Button
+                {
+                    Text = row["nama_metode_pesanan"].ToString(),
+                    Tag = Convert.ToInt32(row["id_metode_pesanan"]),
+                    Width = 150,
+                    Height = 50,
+                    BackColor = Color.White,
+                    ForeColor = ColorTranslator.FromHtml("#353535"),
+                    Margin = new Padding(20, 25, 20, 25),
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    FlatStyle = FlatStyle.Flat,
+                    FlatAppearance = { BorderSize = 0 },
+                    Font = new Font("Gilroy", 10, FontStyle.Bold)
+                };
+                btnOrderMethod.Click += btnOrderMethod_Click;
+                flowOrderMethod.Controls.Add(btnOrderMethod);
             }
-            clickedButton.BackColor = Color.Orange;
+        }
+
+        private int selectedOrderMethodId = 0;
+        private void btnOrderMethod_Click(object sender, EventArgs e)
+        {
+            Button clickedButton = sender as Button;
+            if (clickedButton != null)
+            {
+                selectedOrderMethodId = int.Parse(clickedButton.Tag.ToString());
+                foreach (Button btn in flowOrderMethod.Controls)
+                {
+                    btn.BackColor = Color.White;
+                    btn.ForeColor = Color.Black;
+                }
+
+                clickedButton.BackColor = ColorTranslator.FromHtml("#FF9153");
+                clickedButton.ForeColor = Color.White;
+            }
         }
 
         private void OrderSummary()
@@ -450,6 +497,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Kasir
                 tanggalTransaksi,
                 totalHarga,
                 selectedPaymentMethodId,
+                selectedOrderMethodId,
                 detailTransaksiList);
             foreach (var item in cartItems)
             {
@@ -457,6 +505,25 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Kasir
             }
             CartContext.ClearCart();
             UpdateCartUI();
+            ResetButtons();
+        }
+
+        private void ResetButtons()
+        {
+            textCustomerName.Clear();
+            foreach (Button paymentButtons in flowPaymentMethod.Controls) 
+            {
+                paymentButtons.Enabled = true;
+                paymentButtons.BackColor = DefaultBackColor;
+                paymentButtons.ForeColor = DefaultForeColor;
+            }
+
+            foreach (Button orderMethodButtons in flowOrderMethod.Controls)
+            {
+                orderMethodButtons.Enabled = true;
+                orderMethodButtons.BackColor = DefaultBackColor;
+                orderMethodButtons.ForeColor = DefaultForeColor;
+            }
         }
     }
 }

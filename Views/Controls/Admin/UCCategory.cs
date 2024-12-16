@@ -54,6 +54,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
                 dataGridCategory.DataSource = dataCategory;
                 CustomizeColumnHeaders();
                 AddButtonColumn("Update", "Edit");
+                AddButtonColumn("Delete", "Hapus");
                 AddRowNumbers();
             }
             catch (Exception ex)
@@ -145,15 +146,13 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
                             nama_kategori = categoryData.Rows[0]["nama_kategori"].ToString()
                         };
 
-                        using (var updateForm = new Category_Form())
-                        {
-                            updateForm.PopulateForm(kategori);
-                            updateForm.ShowDialog();
+                        using var updateForm = new Category_Form();
+                        updateForm.PopulateForm(kategori);
+                        updateForm.ShowDialog();
 
-                            if (updateForm.DialogResult == DialogResult.OK)
-                            {
-                                LoadDataCategory();
-                            }
+                        if (updateForm.DialogResult == DialogResult.OK)
+                        {
+                            LoadDataCategory();
                         }
                     }
                     else
@@ -164,6 +163,34 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls.Admin
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Error handling update action: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (e.ColumnIndex == dataGridCategory.Columns["Delete"].Index)
+            {
+                try
+                {
+                    var result = MessageBox.Show("Apakah anda yakin ingin menghapus kategori ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        var idKategori = Convert.ToInt32(dataGridCategory.Rows[e.RowIndex].Cells["id_kategori"].Value);
+                        bool isDeleted = CategoryContext.DeleteCategory(idKategori);
+
+                        if (isDeleted)
+                        {
+                            MessageBox.Show("Kategori berhasil dihapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadDataCategory();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tidak dapat menghapus kategori. Masih ada produk yang terkait!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error handling delete action: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

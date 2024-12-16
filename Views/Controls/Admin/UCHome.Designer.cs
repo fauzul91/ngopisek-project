@@ -43,6 +43,7 @@
             dataGridRecentInvoice = new DataGridView();
             panel5 = new Panel();
             flowTop5Products = new FlowLayoutPanel();
+            textName = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -209,10 +210,22 @@
             flowTop5Products.Size = new Size(345, 456);
             flowTop5Products.TabIndex = 2;
             // 
+            // textName
+            // 
+            textName.AutoSize = true;
+            textName.Font = new Font("Gilroy-SemiBold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textName.Location = new Point(333, 73);
+            textName.Name = "textName";
+            textName.Size = new Size(119, 44);
+            textName.TabIndex = 4;
+            textName.Text = "Andre";
+            // 
             // UCHome
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(246, 246, 246);
+            Controls.Add(textName);
             Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(label1);
@@ -249,5 +262,6 @@
         private Label dataProducts;
         private FlowLayoutPanel flowTop5Products;
         private DataGridView dataGridRecentInvoice;
+        private Label textName;
     }
 }

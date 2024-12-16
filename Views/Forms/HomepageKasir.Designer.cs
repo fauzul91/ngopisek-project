@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btnProfile = new Button();
             btnLogout = new Button();
             btnOrderHistory = new Button();
             btnHome = new Button();
@@ -41,6 +42,7 @@
             panel1.BackColor = Color.Transparent;
             panel1.BackgroundImage = Properties.Resources.Side_Panel_Homepage_kasir1;
             panel1.BackgroundImageLayout = ImageLayout.Center;
+            panel1.Controls.Add(btnProfile);
             panel1.Controls.Add(btnLogout);
             panel1.Controls.Add(btnOrderHistory);
             panel1.Controls.Add(btnHome);
@@ -49,6 +51,20 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(184, 1166);
             panel1.TabIndex = 0;
+            // 
+            // btnProfile
+            // 
+            btnProfile.BackColor = Color.Transparent;
+            btnProfile.BackgroundImageLayout = ImageLayout.Stretch;
+            btnProfile.FlatAppearance.BorderSize = 0;
+            btnProfile.FlatStyle = FlatStyle.Flat;
+            btnProfile.Image = Properties.Resources.Icon_Profile1;
+            btnProfile.Location = new Point(45, 512);
+            btnProfile.Name = "btnProfile";
+            btnProfile.Size = new Size(89, 74);
+            btnProfile.TabIndex = 3;
+            btnProfile.UseVisualStyleBackColor = false;
+            btnProfile.Click += btnProfile_Click;
             // 
             // btnLogout
             // 
@@ -91,6 +107,7 @@
             // 
             // panelKasir
             // 
+            panelKasir.BackColor = Color.FromArgb(246, 246, 246);
             panelKasir.Location = new Point(178, 0);
             panelKasir.Name = "panelKasir";
             panelKasir.Size = new Size(1730, 1174);
@@ -118,5 +135,6 @@
         private Button btnOrderHistory;
         private Button btnLogout;
         private Panel panelKasir;
+        private Button btnProfile;
     }
 }

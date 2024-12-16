@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             Register = new Panel();
+            btnEye2 = new Button();
+            btnEye = new Button();
             textConfirmPassword = new TextBox();
             textPassword = new TextBox();
-            textBox1 = new TextBox();
             comboRole = new ComboBox();
             textPasskey = new TextBox();
             textUsername = new TextBox();
@@ -46,9 +47,10 @@
             // 
             Register.BackgroundImage = Properties.Resources.Register_Form;
             Register.BackgroundImageLayout = ImageLayout.Zoom;
+            Register.Controls.Add(btnEye2);
+            Register.Controls.Add(btnEye);
             Register.Controls.Add(textConfirmPassword);
             Register.Controls.Add(textPassword);
-            Register.Controls.Add(textBox1);
             Register.Controls.Add(comboRole);
             Register.Controls.Add(textPasskey);
             Register.Controls.Add(textUsername);
@@ -57,6 +59,34 @@
             Register.Name = "Register";
             Register.Size = new Size(719, 784);
             Register.TabIndex = 0;
+            // 
+            // btnEye2
+            // 
+            btnEye2.BackColor = Color.FromArgb(247, 250, 252);
+            btnEye2.BackgroundImage = Properties.Resources.eye_svgrepo_com;
+            btnEye2.BackgroundImageLayout = ImageLayout.Stretch;
+            btnEye2.FlatAppearance.BorderSize = 0;
+            btnEye2.FlatStyle = FlatStyle.Flat;
+            btnEye2.Location = new Point(621, 499);
+            btnEye2.Name = "btnEye2";
+            btnEye2.Size = new Size(40, 40);
+            btnEye2.TabIndex = 9;
+            btnEye2.UseVisualStyleBackColor = false;
+            btnEye2.Click += btnEye2_Click;
+            // 
+            // btnEye
+            // 
+            btnEye.BackColor = Color.FromArgb(247, 250, 252);
+            btnEye.BackgroundImage = Properties.Resources.eye_svgrepo_com;
+            btnEye.BackgroundImageLayout = ImageLayout.Stretch;
+            btnEye.FlatAppearance.BorderSize = 0;
+            btnEye.FlatStyle = FlatStyle.Flat;
+            btnEye.Location = new Point(622, 381);
+            btnEye.Name = "btnEye";
+            btnEye.Size = new Size(40, 40);
+            btnEye.TabIndex = 8;
+            btnEye.UseVisualStyleBackColor = false;
+            btnEye.Click += btnEye_Click;
             // 
             // textConfirmPassword
             // 
@@ -82,22 +112,11 @@
             textPassword.Size = new Size(607, 36);
             textPassword.TabIndex = 6;
             // 
-            // textBox1
-            // 
-            textBox1.BackColor = Color.FromArgb(247, 250, 252);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Cursor = Cursors.IBeam;
-            textBox1.Font = new Font("Poppins", 12F);
-            textBox1.ForeColor = Color.FromArgb(53, 53, 53);
-            textBox1.Location = new Point(56, 374);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(607, 36);
-            textBox1.TabIndex = 6;
-            // 
             // comboRole
             // 
             comboRole.BackColor = Color.FromArgb(247, 250, 252);
             comboRole.Cursor = Cursors.Hand;
+            comboRole.DropDownStyle = ComboBoxStyle.DropDownList;
             comboRole.FlatStyle = FlatStyle.Flat;
             comboRole.Font = new Font("Poppins", 12F);
             comboRole.ForeColor = Color.FromArgb(53, 53, 53);
@@ -126,7 +145,7 @@
             textUsername.Cursor = Cursors.IBeam;
             textUsername.Font = new Font("Poppins", 12F);
             textUsername.ForeColor = Color.FromArgb(53, 53, 53);
-            textUsername.Location = new Point(55, 270);
+            textUsername.Location = new Point(55, 269);
             textUsername.Name = "textUsername";
             textUsername.Size = new Size(607, 36);
             textUsername.TabIndex = 1;
@@ -138,7 +157,7 @@
             textName.Cursor = Cursors.IBeam;
             textName.Font = new Font("Poppins", 12F);
             textName.ForeColor = Color.FromArgb(53, 53, 53);
-            textName.Location = new Point(55, 162);
+            textName.Location = new Point(55, 158);
             textName.Name = "textName";
             textName.Size = new Size(607, 36);
             textName.TabIndex = 0;
@@ -186,6 +205,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(246, 246, 246);
             Controls.Add(label1);
             Controls.Add(pressLogin);
             Controls.Add(btnRegister);
@@ -209,7 +229,8 @@
         private TextBox textUsername;
         private TextBox textConfirmPassword;
         private TextBox textPassword;
-        private TextBox textBox1;
         private Label label1;
+        private Button btnEye2;
+        private Button btnEye;
     }
 }

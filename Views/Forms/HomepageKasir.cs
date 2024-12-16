@@ -27,7 +27,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
         private void InitializeUCs()
         {
             homeKasir = new UC_HomeKasir();
-            AddUserControl(homeKasir); 
+            AddUserControl(homeKasir);
         }
 
         private void AddUserControl(UserControl userControl)
@@ -43,16 +43,24 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
             UC_HomeKasir homeKasir = new UC_HomeKasir();
             AddUserControl(homeKasir);
         }
-                
+
         private void LoadOrderHistoryData()
         {
+            UC_HistoryPesanan historyPesanan = new UC_HistoryPesanan();
+            AddUserControl(historyPesanan);
+        }
 
+        private void LoadProfileData()
+        {
+            UCProfilKasir profilKasir = new UCProfilKasir();
+            AddUserControl(profilKasir);
         }
 
         private void SetActiveMenu(Button activeButton)
         {
             btnHome.Enabled = true;
             btnOrderHistory.Enabled = true;
+            btnProfile.Enabled = true;
 
             activeButton.Enabled = false;
         }
@@ -68,6 +76,11 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
             LoadOrderHistoryData();
             SetActiveMenu(btnOrderHistory);
         }
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            LoadProfileData();
+            SetActiveMenu(btnProfile);
+        }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -78,7 +91,7 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
                 this.Hide();
                 Authentication auth = new Authentication();
                 auth.Show();
-            }            
+            }
         }
     }
 }

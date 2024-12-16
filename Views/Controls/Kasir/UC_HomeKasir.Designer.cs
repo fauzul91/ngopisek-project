@@ -46,6 +46,7 @@
             textTax = new Label();
             textSubTotal = new Label();
             panelTransaksi = new Panel();
+            flowOrderMethod = new FlowLayoutPanel();
             searchBar.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -123,7 +124,7 @@
             btnCheckOut.FlatStyle = FlatStyle.Flat;
             btnCheckOut.Font = new Font("Gilroy-Bold", 9.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCheckOut.ForeColor = Color.White;
-            btnCheckOut.Location = new Point(30, 1028);
+            btnCheckOut.Location = new Point(30, 1012);
             btnCheckOut.Name = "btnCheckOut";
             btnCheckOut.Size = new Size(412, 61);
             btnCheckOut.TabIndex = 11;
@@ -136,7 +137,7 @@
             flowPaymentMethod.AutoScroll = true;
             flowPaymentMethod.BackColor = Color.Transparent;
             flowPaymentMethod.BackgroundImage = Properties.Resources.Background_Payment_Method;
-            flowPaymentMethod.Location = new Point(30, 713);
+            flowPaymentMethod.Location = new Point(30, 725);
             flowPaymentMethod.Name = "flowPaymentMethod";
             flowPaymentMethod.Size = new Size(412, 96);
             flowPaymentMethod.TabIndex = 12;
@@ -146,7 +147,7 @@
             panel6.BackColor = Color.Transparent;
             panel6.BackgroundImage = Properties.Resources.Order_Details;
             panel6.BackgroundImageLayout = ImageLayout.None;
-            panel6.Location = new Point(30, 229);
+            panel6.Location = new Point(30, 273);
             panel6.Name = "panel6";
             panel6.Size = new Size(181, 32);
             panel6.TabIndex = 7;
@@ -158,10 +159,10 @@
             flowOrderDetails.BackgroundImage = Properties.Resources.Background_Order_Details;
             flowOrderDetails.BackgroundImageLayout = ImageLayout.Stretch;
             flowOrderDetails.ForeColor = Color.FromArgb(53, 53, 53);
-            flowOrderDetails.Location = new Point(30, 281);
+            flowOrderDetails.Location = new Point(30, 311);
             flowOrderDetails.Name = "flowOrderDetails";
             flowOrderDetails.Padding = new Padding(25, 0, 25, 0);
-            flowOrderDetails.Size = new Size(412, 418);
+            flowOrderDetails.Size = new Size(412, 396);
             flowOrderDetails.TabIndex = 9;
             // 
             // panel5
@@ -180,7 +181,7 @@
             panel3.BackgroundImage = Properties.Resources.Customer_Name;
             panel3.BackgroundImageLayout = ImageLayout.Stretch;
             panel3.Controls.Add(textCustomerName);
-            panel3.Location = new Point(30, 104);
+            panel3.Location = new Point(30, 142);
             panel3.Name = "panel3";
             panel3.Size = new Size(412, 107);
             panel3.TabIndex = 6;
@@ -250,6 +251,7 @@
             // 
             panelTransaksi.BackColor = Color.White;
             panelTransaksi.BackgroundImageLayout = ImageLayout.Zoom;
+            panelTransaksi.Controls.Add(flowOrderMethod);
             panelTransaksi.Controls.Add(panel2);
             panelTransaksi.Controls.Add(panel3);
             panelTransaksi.Controls.Add(panel5);
@@ -262,6 +264,16 @@
             panelTransaksi.Name = "panelTransaksi";
             panelTransaksi.Size = new Size(473, 1174);
             panelTransaksi.TabIndex = 4;
+            // 
+            // flowOrderMethod
+            // 
+            flowOrderMethod.AutoScroll = true;
+            flowOrderMethod.BackColor = Color.Transparent;
+            flowOrderMethod.BackgroundImage = Properties.Resources.Background_Payment_Method;
+            flowOrderMethod.Location = new Point(30, 15);
+            flowOrderMethod.Name = "flowOrderMethod";
+            flowOrderMethod.Size = new Size(412, 96);
+            flowOrderMethod.TabIndex = 14;
             // 
             // UC_HomeKasir
             // 
@@ -306,5 +318,6 @@
         private Label textTax;
         private Label textSubTotal;
         private Panel panelTransaksi;
+        private FlowLayoutPanel flowOrderMethod;
     }
 }

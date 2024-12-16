@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btnProfile = new Button();
+            btnPayment = new Button();
             btnLogout = new Button();
             btnOrder = new Button();
             btnCategory = new Button();
@@ -42,6 +44,8 @@
             // 
             panel1.BackgroundImage = Properties.Resources.Side_Homepage_Admin_Panel;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(btnProfile);
+            panel1.Controls.Add(btnPayment);
             panel1.Controls.Add(btnLogout);
             panel1.Controls.Add(btnOrder);
             panel1.Controls.Add(btnCategory);
@@ -52,6 +56,44 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(388, 1166);
             panel1.TabIndex = 0;
+            // 
+            // btnProfile
+            // 
+            btnProfile.BackColor = Color.Transparent;
+            btnProfile.FlatAppearance.BorderSize = 0;
+            btnProfile.FlatStyle = FlatStyle.Flat;
+            btnProfile.Font = new Font("Gilroy-SemiBold", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnProfile.ForeColor = Color.FromArgb(60, 60, 60);
+            btnProfile.Image = Properties.Resources.Icon_Profile;
+            btnProfile.ImageAlign = ContentAlignment.MiddleLeft;
+            btnProfile.Location = new Point(70, 689);
+            btnProfile.Name = "btnProfile";
+            btnProfile.Padding = new Padding(24, 0, 0, 0);
+            btnProfile.Size = new Size(246, 64);
+            btnProfile.TabIndex = 6;
+            btnProfile.Text = "      Profil";
+            btnProfile.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnProfile.UseVisualStyleBackColor = false;
+            btnProfile.Click += btnProfile_Click;
+            // 
+            // btnPayment
+            // 
+            btnPayment.BackColor = Color.Transparent;
+            btnPayment.FlatAppearance.BorderSize = 0;
+            btnPayment.FlatStyle = FlatStyle.Flat;
+            btnPayment.Font = new Font("Gilroy-SemiBold", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPayment.ForeColor = Color.FromArgb(60, 60, 60);
+            btnPayment.Image = Properties.Resources.Payment_Icon1;
+            btnPayment.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPayment.Location = new Point(70, 590);
+            btnPayment.Name = "btnPayment";
+            btnPayment.Padding = new Padding(24, 0, 0, 0);
+            btnPayment.Size = new Size(246, 64);
+            btnPayment.TabIndex = 5;
+            btnPayment.Text = "      Payment";
+            btnPayment.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnPayment.UseVisualStyleBackColor = false;
+            btnPayment.Click += btnPayment_Click;
             // 
             // btnLogout
             // 
@@ -150,6 +192,7 @@
             // 
             // panelAdmin
             // 
+            panelAdmin.BackColor = Color.FromArgb(246, 246, 246);
             panelAdmin.Dock = DockStyle.Right;
             panelAdmin.Location = new Point(384, 0);
             panelAdmin.Name = "panelAdmin";
@@ -180,5 +223,7 @@
         private Button btnOrder;
         private Button btnCategory;
         private Button btnLogout;
+        private Button btnPayment;
+        private Button btnProfile;
     }
 }

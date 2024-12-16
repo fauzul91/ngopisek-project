@@ -184,7 +184,7 @@
             // pictureProduct
             // 
             pictureProduct.BackColor = Color.White;
-            pictureProduct.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureProduct.BackgroundImageLayout = ImageLayout.Stretch;
             pictureProduct.Location = new Point(92, 111);
             pictureProduct.Name = "pictureProduct";
             pictureProduct.Size = new Size(500, 500);
@@ -195,6 +195,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(246, 246, 246);
             ClientSize = new Size(1251, 779);
             Controls.Add(pictureProduct);
             Controls.Add(label6);

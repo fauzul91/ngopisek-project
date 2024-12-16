@@ -34,10 +34,15 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls
             int idRole; int idPengguna;
             bool isLoginSuccessful = AkunContext.Login(username, password, out idRole, out idPengguna);
 
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Data tidak boleh kosong. Harap isi username dan password.");
+                return;
+            }
             if (isLoginSuccessful)
             {
                 Session.CurrentUserId = idPengguna;
-                Form currentForm = this.FindForm(); // Dapatkan form Auth saat ini
+                Form currentForm = this.FindForm();
 
                 if (idRole == 1)
                 {
@@ -60,13 +65,25 @@ namespace NgopiSek_Desktop_App_V2.Views.Controls
             }
             else
             {
-                MessageBox.Show("Data tidak valid.");
+                MessageBox.Show("Username atau password salah.");
             }
         }
 
         private void pressRegister_Click(object sender, EventArgs e)
         {
             RegisterClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void btnEye_Click(object sender, EventArgs e)
+        {
+            if (textPassword.PasswordChar == '*')
+            {
+                textPassword.PasswordChar = '\0'; 
+            }
+            else
+            {
+                textPassword.PasswordChar = '*';
+            }
         }
     }
 }

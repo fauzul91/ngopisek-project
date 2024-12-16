@@ -33,9 +33,9 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panel1 = new Panel();
             searchBar = new Panel();
+            searchIcon = new Button();
             textSearch = new TextBox();
             dataGridOrder = new DataGridView();
-            searchIcon = new Button();
             searchBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridOrder).BeginInit();
             SuspendLayout();
@@ -60,6 +60,19 @@
             searchBar.Name = "searchBar";
             searchBar.Size = new Size(748, 85);
             searchBar.TabIndex = 4;
+            // 
+            // searchIcon
+            // 
+            searchIcon.BackColor = Color.Transparent;
+            searchIcon.FlatAppearance.BorderSize = 0;
+            searchIcon.FlatStyle = FlatStyle.Flat;
+            searchIcon.Image = Properties.Resources.Search_Icon;
+            searchIcon.Location = new Point(22, 16);
+            searchIcon.Name = "searchIcon";
+            searchIcon.Size = new Size(54, 45);
+            searchIcon.TabIndex = 3;
+            searchIcon.UseVisualStyleBackColor = false;
+            searchIcon.Click += searchIcon_Click_1;
             // 
             // textSearch
             // 
@@ -113,24 +126,13 @@
             dataGridOrder.ScrollBars = ScrollBars.Vertical;
             dataGridOrder.Size = new Size(1333, 743);
             dataGridOrder.TabIndex = 9;
-            // 
-            // searchIcon
-            // 
-            searchIcon.BackColor = Color.Transparent;
-            searchIcon.FlatAppearance.BorderSize = 0;
-            searchIcon.FlatStyle = FlatStyle.Flat;
-            searchIcon.Image = Properties.Resources.Search_Icon;
-            searchIcon.Location = new Point(22, 16);
-            searchIcon.Name = "searchIcon";
-            searchIcon.Size = new Size(54, 45);
-            searchIcon.TabIndex = 3;
-            searchIcon.UseVisualStyleBackColor = false;
-            searchIcon.Click += searchIcon_Click_1;
+            dataGridOrder.CellContentClick += dataGridOrder_CellContentClick;
             // 
             // UCOrder
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(246, 246, 246);
             Controls.Add(dataGridOrder);
             Controls.Add(panel1);
             Controls.Add(searchBar);

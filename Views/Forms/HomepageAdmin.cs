@@ -59,6 +59,19 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
             SetActiveMenu(btnOrder);
         }
 
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            UCPayment payment = new UCPayment();
+            AddUserControl(payment);
+            SetActiveMenu(btnPayment);
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            UCProfil profil = new UCProfil();
+            AddUserControl(profil);
+            SetActiveMenu(btnProfile);
+        }
         private void AddUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -73,6 +86,8 @@ namespace NgopiSek_Desktop_App_V2.Views.Forms
             btnProduct.Enabled = true;
             btnCategory.Enabled = true;
             btnOrder.Enabled = true;
+            btnPayment.Enabled = true;
+            btnProfile.Enabled = true;
 
             activeButton.Enabled = false;
         }
