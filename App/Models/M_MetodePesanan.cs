@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 
 namespace NgopiSek_Desktop_App_V2.App.Models
 {
-    public class M_Kategori
+    public class M_MetodePesanan
     {
-        [Key]
-        public int id_kategori { get; set; }
         [Required]
-        public string nama_kategori { get; set; }
-        public bool status { get; set; }
-
+        public int id_metode_pesanan { get; set; }
+        [Required]
+        public string nama_metode_pesanan { get; set; }
     }
 }

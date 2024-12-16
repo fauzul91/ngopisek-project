@@ -18,11 +18,11 @@ namespace NgopiSek_Desktop_App_V2.App.Models
         public int harga_produk { get; set; }
         [Required]
         public int stok_produk { get; set; }
+        public byte[] foto_produk { get; set; }
 
         [ForeignKey("Kategori")]
         public int id_kategori { get; set; }  
-        public byte[] foto_produk { get; set; }
-
+        public bool status { set; get; }
         public M_Kategori Kategori { get; set; }
     }
 }

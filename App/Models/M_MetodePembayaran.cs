@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace NgopiSek_Desktop_App_V2.App.Models
 {
-    internal class M_MetodePembayaran
+    public class M_MetodePembayaran
     {
         [Key]
         public int id_metode_pembayaran { get; set; }
         [Required]
         public string nama_metode_pembayaran { get; set; }
+        public bool status { get; set; }
     }
 }

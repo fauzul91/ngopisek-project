@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NgopiSek_Desktop_App_V2.App.Models
 {
-    internal class M_Pengguna
+    public class M_Pengguna
     {
         [Key]
         public int id_pengguna { get; set; }
@@ -20,7 +20,7 @@ namespace NgopiSek_Desktop_App_V2.App.Models
         public string password_pengguna { get; set; }
         [ForeignKey("Role")]
         public int id_role { get; set; }
+        public byte[] foto_pengguna { get; set; }
 
-        public M_Role Role { get; set; }
     }
 }

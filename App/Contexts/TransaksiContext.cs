@@ -19,10 +19,12 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
 	            tr.id_transaksi, 
 	            tr.tanggal_transaksi, 
 	            tr.nama_customer, 
-	            m.nama_metode_pembayaran, 
+	            m.nama_metode_pembayaran,
+                mp.nama_metode_pesanan,
 	            p.nama_pengguna as nama_kasir 
             FROM transaksi tr
             JOIN metode_pembayaran m on m.id_metode_pembayaran = tr.id_metode_pembayaran
+            JOIN metode_pesanan mp on mp.id_metode_pesanan = tr.id_metode_pesanan
             JOIN pengguna p on p.id_pengguna = tr.id_kasir";
 
             DataTable dataTransaksi = queryExecutor(query);
@@ -33,13 +35,15 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
         {
             string query = @"
             SELECT 
-	            tr.id_transaksi, 
-	            tr.tanggal_transaksi, 
-	            tr.customer_name, 
-	            m.nama_metode_pembayaran, 
-	            p.nama_pengguna as nama_kasir 
+                tr.id_transaksi, 
+                tr.tanggal_transaksi, 
+                tr.customer_name, 
+                m.nama_metode_pembayaran, 
+                mp.nama_metode_pesanan,
+                p.nama_pengguna as nama_kasir 
             FROM transaksi tr
             JOIN metode_pembayaran m on m.id_metode_pembayaran = tr.id_metode_pembayaran
+            JOIN metode_pesanan mp on mp.id_metode_pesanan = tr.id_metode_pesanan  -- Bergabung dengan tabel metode_pesanan
             JOIN pengguna p on p.id_pengguna = tr.id_kasir
             WHERE tr.id_transaksi = @id
             ORDER BY p.id_produk";
@@ -60,10 +64,12 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
 	            tr.id_transaksi, 
 	            tr.tanggal_transaksi, 
 	            tr.nama_customer, 
-	            m.nama_metode_pembayaran, 
+	            m.nama_metode_pembayaran,
+                mp.nama_metode_pesanan,
 	            p.nama_pengguna as nama_kasir 
             FROM transaksi tr
             JOIN metode_pembayaran m on m.id_metode_pembayaran = tr.id_metode_pembayaran
+            JOIN metode_pesanan mp on mp.id_metode_pesanan = tr.id_metode_pesanan
             JOIN pengguna p on p.id_pengguna = tr.id_kasir
             WHERE to_char(tr.tanggal_transaksi, 'DD/MM/YYYY') ILIKE @textTransaksi
             ORDER BY tr.id_transaksi
@@ -89,28 +95,41 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
             return dataPayment;
         }
 
+        public static DataTable GetOrderMethod()
+        {
+            string query = @"
+            SELECT id_metode_pesanan, nama_metode_pesanan
+            FROM metode_pesanan
+            ";
+
+            DataTable dataOrderMethod = queryExecutor(query);
+            return dataOrderMethod;
+        }
+
         public void InsertTransaksi(
             int idKasir,
             string namaCustomer,
             DateTime tanggalTransaksi,  
             decimal totalHarga,
             int idMetodePembayaran,
+            int idMetodePesanan,
             List<M_DetailTransaksi> detailTransaksiList)
             {
             try
             {
                 string queryTransaksi = @"
                 INSERT INTO transaksi 
-                (id_kasir, nama_customer, tanggal_transaksi, id_metode_pembayaran) 
-                VALUES (@idKasir, @namaCustomer, @tanggalTransaksi, @idMetodePembayaran) 
+                (id_kasir, nama_customer, tanggal_transaksi, id_metode_pembayaran, id_metode_pesanan)  -- Menyertakan id_metode_pesanan
+                VALUES (@idKasir, @namaCustomer, @tanggalTransaksi, @idMetodePembayaran, @idMetodePesanan) 
                 RETURNING id_transaksi";
 
                 NpgsqlParameter[] transaksiParams = new NpgsqlParameter[]
                 {
                     new NpgsqlParameter("@idKasir", idKasir),
                     new NpgsqlParameter("@namaCustomer", namaCustomer),
-                    new NpgsqlParameter("@tanggalTransaksi", DateTime.Now),  // Mengambil tanggal dan waktu saat ini
-                    new NpgsqlParameter("@idMetodePembayaran", idMetodePembayaran)
+                    new NpgsqlParameter("@tanggalTransaksi", DateTime.Now), 
+                    new NpgsqlParameter("@idMetodePembayaran", idMetodePembayaran),
+                    new NpgsqlParameter("@idMetodePesanan", idMetodePesanan)
                 };
 
                 DataTable resultTable = DatabaseWrapper.queryExecutor(queryTransaksi, transaksiParams);
@@ -140,6 +159,59 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
                 throw;
             }
         }
+        public static DataTable LoadHistoryKasir()
+        {
+            int idKasir = Session.CurrentUserId;
+            string query = @"
+            SELECT 
+	            tr.id_transaksi, 
+	            tr.tanggal_transaksi, 
+	            tr.nama_customer, 
+	            m.nama_metode_pembayaran,
+                mp.nama_metode_pesanan,
+	            p.nama_pengguna as nama_kasir 
+            FROM transaksi tr
+            JOIN metode_pembayaran m on m.id_metode_pembayaran = tr.id_metode_pembayaran
+            JOIN metode_pesanan mp on mp.id_metode_pesanan = tr.id_metode_pesanan
+            JOIN pengguna p on p.id_pengguna = tr.id_kasir
+            WHERE tr.id_kasir = @idKasir";
 
+            NpgsqlParameter[] parameters =
+            {
+                new NpgsqlParameter("@idKasir", NpgsqlTypes.NpgsqlDbType.Integer ) { Value = idKasir }
+            };
+
+            DataTable historyKasir = queryExecutor(query, parameters);
+            return historyKasir;
+        }
+
+        public static DataTable SearchHistorykasir(string textTransaksi)
+        {
+            int idKasir = Session.CurrentUserId;
+            string query = @"
+            SELECT 
+	            tr.id_transaksi, 
+	            tr.tanggal_transaksi, 
+	            tr.nama_customer, 
+	            m.nama_metode_pembayaran,
+                mp.nama_metode_pesanan,
+	            p.nama_pengguna as nama_kasir 
+            FROM transaksi tr
+            JOIN metode_pembayaran m on m.id_metode_pembayaran = tr.id_metode_pembayaran
+            JOIN metode_pesanan mp on mp.id_metode_pesanan = tr.id_metode_pesanan
+            JOIN pengguna p on p.id_pengguna = tr.id_kasir
+            WHERE to_char(tr.tanggal_transaksi, 'DD/MM/YYYY') ILIKE @textTransaksi AND tr.id_kasir = @idKasir
+            ORDER BY tr.id_transaksi
+            ";
+
+            NpgsqlParameter[] parameters =
+            {
+                new NpgsqlParameter("@textTransaksi", NpgsqlTypes.NpgsqlDbType.Text ) { Value = $"%{textTransaksi}%" },
+                new NpgsqlParameter("@idKasir", NpgsqlTypes.NpgsqlDbType.Integer ) { Value = idKasir}
+            };
+
+            DataTable searchTransaksi = queryExecutor(query, parameters);
+            return searchTransaksi;            
+        }
     }
 }

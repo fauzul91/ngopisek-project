@@ -26,6 +26,7 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
                 p.foto_produk
             FROM produk p
             JOIN kategori k on p.id_kategori = k.id_kategori
+            WHERE p.status = false
             ORDER BY p.id_produk";
 
             DataTable dataProduk = queryExecutor(query);
@@ -44,7 +45,7 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
                 p.foto_produk
             FROM produk p
             JOIN kategori k on p.id_kategori = k.id_kategori
-            WHERE p.stok_produk > 20
+            WHERE p.stok_produk > 20 AND p.status = false
             ORDER BY p.id_produk";
 
             DataTable dataProduk = queryExecutor(query);
@@ -63,7 +64,7 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
                 p.foto_produk
             FROM produk p
             JOIN kategori k on p.id_kategori = k.id_kategori
-            WHERE p.id_produk = @id
+            WHERE p.id_produk = @id AND p.status = false
             ORDER BY p.id_produk";
 
             NpgsqlParameter[] parameters =
@@ -139,7 +140,7 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
             SELECT p.id_produk, p.nama_produk, p.harga_produk, p.stok_produk, p.id_kategori, k.nama_kategori, p.foto_produk 
             FROM produk p 
             JOIN kategori k ON p.id_kategori = k.id_kategori 
-            WHERE p.nama_produk ILIKE @textProduct 
+            WHERE p.nama_produk ILIKE @textProduct AND p.status = false
             ORDER BY p.nama_produk";
 
             NpgsqlParameter[] parameters =
@@ -156,7 +157,7 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
             string query = @"
             SELECT stok_produk 
             FROM produk
-            WHERE id_produk = @id";            
+            WHERE id_produk = @id AND status = false";            
 
             DataTable dataStok = queryExecutor(query);
             return dataStok;
@@ -167,7 +168,7 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
             string query = @"
             UPDATE produk 
             SET stok_produk = stok_produk - @kuantitas
-            WHERE id_produk = @id_produk";
+            WHERE id_produk = @id_produk AND status = false";
 
             NpgsqlParameter[] parameters =
             {
@@ -176,6 +177,21 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
             };
 
             queryExecutor(query, parameters);
+        }
+
+        public static void DeleteProduct(int id_produk)
+        {
+            string query = @"
+            UPDATE produk
+            SET status = TRUE
+            WHERE id_produk = @id_produk";
+
+            NpgsqlParameter[] parameters =
+            {
+                new NpgsqlParameter("@id_produk", NpgsqlTypes.NpgsqlDbType.Integer) { Value = id_produk }
+            };
+
+            commandExecutor(query, parameters);
         }
     }
 }

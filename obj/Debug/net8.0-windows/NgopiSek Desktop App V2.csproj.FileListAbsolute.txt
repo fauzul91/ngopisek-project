@@ -31,3 +31,10 @@ C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\Ngo
 C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Views.Forms.Product_Form.resources
 C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Views.Forms.Category_Form.resources
 C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Views.Controls.Kasir.UC_HomeKasir.resources
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Views.Controls.Admin.UCPayment.resources
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Views.Forms.PaymentForm.resources
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Views.Controls.Kasir.UC_HistoryPesanan.resources
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Views.Forms.DetailPesanan.resources
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\bin\Debug\net8.0-windows\NgopiSek Desktop App V2.dll.config
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Views.Controls.Admin.UCProfil.resources
+C:\Users\fauzu\source\repos\NgopiSek Desktop App V2\obj\Debug\net8.0-windows\NgopiSek_Desktop_App_V2.Views.Controls.Kasir.UCProfilKasir.resources

@@ -1,4 +1,5 @@
 ﻿using NgopiSek_Desktop_App_V2.App.Core;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -48,6 +49,23 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
             DataTable dataCustomers = queryExecutor(query);
             return dataCustomers;
         }
+
+        public static DataTable GetUsername(int idPengguna)
+        {
+            string query = @"
+            SELECT nama_pengguna            
+            FROM pengguna
+            WHERE id_pengguna = @idPengguna";
+
+            NpgsqlParameter[] parameters =
+            {
+                new NpgsqlParameter("@idPengguna", NpgsqlTypes.NpgsqlDbType.Integer) { Value = idPengguna }
+            };
+
+            DataTable dataGetUsername = queryExecutor(query, parameters);
+            return dataGetUsername;
+        }
+
         public static DataTable CountProducts()
         {
             string query = @"SELECT COUNT(*) AS total_products FROM produk";
@@ -63,10 +81,12 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
                 tr.id_transaksi, 
                 tr.tanggal_transaksi, 
                 tr.nama_customer, 
-                m.nama_metode_pembayaran, 
+                m.nama_metode_pembayaran,
+                mp.nama_metode_pesanan,
                 p.nama_pengguna as nama_kasir 
             FROM transaksi tr
             JOIN metode_pembayaran m on m.id_metode_pembayaran = tr.id_metode_pembayaran
+            JOIN metode_pesanan mp on mp.id_metode_pesanan = tr.id_metode_pesanan
             JOIN pengguna p on p.id_pengguna = tr.id_kasir
             ORDER BY tr.tanggal_transaksi DESC
             LIMIT 10";

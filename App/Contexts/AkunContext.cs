@@ -89,8 +89,8 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
 
             NpgsqlParameter[] parameters = new NpgsqlParameter[]
             {
-        new NpgsqlParameter("@username", username),
-        new NpgsqlParameter("@password", password),
+                new NpgsqlParameter("@username", username),
+                new NpgsqlParameter("@password", password),
             };
 
             idRole = 0;
@@ -109,7 +109,7 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
                     {
                         idRole = Convert.ToInt32(reader["id_role"]);
                         idPengguna = Convert.ToInt32(reader["id_pengguna"]);
-                        return true; // Login sukses
+                        return true; 
                     }
                 }
                 closeConnection();
@@ -123,5 +123,99 @@ namespace NgopiSek_Desktop_App_V2.App.Contexts
             }
         }
 
+        public static bool Update(M_Pengguna pengguna)
+        {
+            try
+            {
+                string query = "UPDATE pengguna SET nama_pengguna = @nama_pengguna, username_pengguna = @username_pengguna, password_pengguna = @password_pengguna, foto_pengguna = @foto_pengguna WHERE id_pengguna = @id_pengguna";
+                NpgsqlParameter[] parameters = new NpgsqlParameter[]
+                {
+                    new NpgsqlParameter("@nama_pengguna", pengguna.nama_pengguna),
+                    new NpgsqlParameter("@username_pengguna", pengguna.username_pengguna),
+                    new NpgsqlParameter("@password_pengguna", pengguna.password_pengguna ?? (object)DBNull.Value),
+                    new NpgsqlParameter("@foto_pengguna", pengguna.foto_pengguna ?? (object)DBNull.Value),
+                    new NpgsqlParameter("@id_pengguna", pengguna.id_pengguna)
+                };
+
+                commandExecutor(query, parameters);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public static M_Pengguna GetUserById(int userId)
+        {
+            M_Pengguna pengguna = null;
+
+            try
+            {
+                string query = @"SELECT id_pengguna, nama_pengguna, username_pengguna, password_pengguna, foto_pengguna, id_role 
+                                FROM pengguna WHERE id_pengguna = @id_pengguna";
+
+                NpgsqlParameter[] parameters = new NpgsqlParameter[]
+                {
+                    new NpgsqlParameter("@id_pengguna", userId)
+                };
+
+                DataTable dataTable = DatabaseWrapper.queryExecutor(query, parameters);
+
+                if (dataTable.Rows.Count > 0)
+                {
+                    DataRow row = dataTable.Rows[0];
+
+                    pengguna = new M_Pengguna
+                    {
+                        id_pengguna = Convert.ToInt32(row["id_pengguna"]),
+                        nama_pengguna = row["nama_pengguna"].ToString(),
+                        username_pengguna = row["username_pengguna"].ToString(),
+                        password_pengguna = row["password_pengguna"].ToString(),
+                        foto_pengguna = row["foto_pengguna"] == DBNull.Value ? null : (byte[])row["foto_pengguna"],
+                        id_role = Convert.ToInt32(row["id_role"])
+                    };
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Error: {e.Message}");
+            }
+
+            return pengguna;
+        }
+
+        public static DataTable GetUsername(int idPengguna)
+        {
+            string query = @"
+            SELECT nama_pengguna            
+            FROM pengguna
+            WHERE id_pengguna = @idPengguna";
+
+            NpgsqlParameter[] parameters =
+            {
+                new NpgsqlParameter("@idPengguna", NpgsqlTypes.NpgsqlDbType.Integer) { Value = idPengguna }
+            };
+
+            DataTable dataGetUsername = queryExecutor(query, parameters);
+            return dataGetUsername;
+        }
+
+        public static DataTable GetRole(int idPengguna)
+        {
+            string query = @"
+            SELECT r.nama_role            
+            FROM pengguna p
+            JOIN role r on r.id_role = p.id_role
+            WHERE id_pengguna = @idPengguna";
+
+            NpgsqlParameter[] parameters =
+            {
+                new NpgsqlParameter("@idPengguna", NpgsqlTypes.NpgsqlDbType.Integer) { Value = idPengguna }
+            };
+
+            DataTable dataGetRole = queryExecutor(query, parameters);
+            return dataGetRole;
+        }
     }
 }
