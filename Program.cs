@@ -1,3 +1,4 @@
+using NgopiSek_Desktop_App_V2.Views.Controls.Admin;
 using NgopiSek_Desktop_App_V2.Views.Forms;
 
 namespace NgopiSek_Desktop_App_V2
