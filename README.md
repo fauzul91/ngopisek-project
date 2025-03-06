@@ -52,13 +52,3 @@ Jika Anda ingin berkontribusi dalam pengembangan aplikasi ini, silakan ikuti lan
 2. Buat branch untuk fitur atau perbaikan yang ingin Anda kerjakan.
 3. Lakukan perubahan dan commit.
 4. Push perubahan Anda dan buat pull request ke repository utama.
-
-## Lisensi
-Aplikasi ini dilisensikan di bawah **MIT License**. Lihat file [LICENSE](LICENSE) untuk informasi lebih lanjut.
-
-## Kontak
-Jika ada pertanyaan lebih lanjut, Anda bisa menghubungi saya melalui email: [email@example.com]
-
----
-
-Semoga ini lebih sesuai! Jika ada hal lain yang perlu disesuaikan, beri tahu saja!
